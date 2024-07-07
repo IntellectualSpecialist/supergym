@@ -1,0 +1,145 @@
+.faq-tab {
+  padding-top: 20px;
+  padding-bottom: 12px;
+}
+
+.faq-tab__header {
+  display: flex;
+  column-gap: 22px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+
+  h3 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+}
+
+.faq-tab__button {
+  position: relative;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  margin-top: 5px;
+  background-color: transparent;
+  border: 1px solid $bg-dark-blue;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 1px;
+    background-color: $bg-dark-blue;
+    transform: translate(-50%, -50%);
+    transition: 0.2s ease-in;
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+
+  &:hover {
+    background-color: $bg-dark-blue;
+
+    &::before,
+    &::after {
+      background-color: $base-white;
+    }
+  }
+
+  &:focus {
+    background-color: $divider;
+
+    &::before,
+    &::after {
+      background-color: $base-white;
+    }
+  }
+
+  &:active {
+    background-color: $bg-dark-blue;
+
+    &::before,
+    &::after {
+      background-color: $base-white;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+
+.faq-tab__button--disabled {
+  opacity: 0.3;
+  pointer-events: none;
+
+  &:focus {
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      background-color: $bg-dark-blue;
+    }
+  }
+}
+
+.faq-tab--active .faq-tab__button {
+  background-color: $bg-dark-blue;
+
+  &::before,
+  &::after {
+    background-color: $base-white;
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  &:focus {
+    background-color: $bg-dark-blue;
+  }
+}
+
+.faq-tab__content {
+  max-height: 0;
+  padding-right: 26px;
+  margin-top: 12px;
+  transition: max-height 0.3s ease-in;
+  overflow: hidden;
+
+  p {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+}
+
+.faq-tab--active {
+  .faq-tab__content {
+    max-height: 300px;
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+}

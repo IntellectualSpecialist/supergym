@@ -1,0 +1,29 @@
+.offers {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.offers__title {
+  margin-bottom: 40px;
+}
+
+.offers__list {
+  @include list-reset;
+}
+
+.offers__item {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--custom {
+    margin-bottom: 40px;
+
+    @media (max-width: $mobile-width-only) {
+      width: 100vw;
+      margin-left: calc((((100vw - 320px) / 2) + 15px) * -1);
+    }
+  }
+}

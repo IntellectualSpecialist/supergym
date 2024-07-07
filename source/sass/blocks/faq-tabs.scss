@@ -1,0 +1,78 @@
+.faq-tabs__list {
+  @include list-reset;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+.faq-tabs__button {
+  display: block;
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-align: center;
+  color: $base-primary;
+  border: 1px solid $tab-border;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $base-primary;
+  }
+
+  &:focus {
+    border-color: $base-primary;
+    background-color: $base-white;
+  }
+
+  &:active {
+    padding: 15px 21px;
+    color: $base-white;
+    border: none;
+    background-image: $bg-btn-gradient;
+  }
+
+  &:disabled {
+    color: #c8c9cc;
+    border-color: $tab-border;
+    pointer-events: none;
+  }
+
+  &--disabled {
+    color: #c8c9cc;
+    border-color: $tab-border;
+    pointer-events: none;
+
+    &:focus {
+      border-color: $tab-border;
+      background-color: transparent;
+    }
+  }
+
+  &--active {
+    padding: 15px 21px;
+    color: $base-white;
+    border: none;
+    background-image: $bg-btn-gradient;
+  }
+}
+
+
+.faq-tabs__tab {
+  @include list-reset;
+
+  display: none;
+  border-top: 1px solid $divider;
+
+  &--current {
+    display: block;
+  }
+}
+
+.faq-tabs__tab-item {
+  border-bottom: 1px solid $divider;
+}

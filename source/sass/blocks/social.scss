@@ -1,0 +1,48 @@
+.social {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  color: $bg-dark;
+  background-color: $base-white;
+  border-radius: 50%;
+
+  &:hover {
+    color: $base-white;
+    background-color: $divider;
+  }
+
+  &:focus {
+    color: $base-white;
+    background-color: $base-secondary;
+  }
+
+  &:active {
+    color: $base-white;
+    background-color: $base-primary;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  &--disabled {
+    opacity: 0.3;
+    pointer-events: none;
+
+    &:focus {
+      color: $bg-dark;
+      background-color: $base-white;
+    }
+  }
+}

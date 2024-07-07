@@ -1,0 +1,29 @@
+.phone {
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 700;
+  color: $base-white;
+  text-decoration: none;
+
+  &:hover {
+    color: rgba(28, 51, 116, 0.5);
+  }
+
+  &:focus {
+    color: $bg-dark-blue;
+  }
+
+  &:active {
+    color: $base-primary;
+    text-decoration: underline;
+    text-decoration-color: $base-primary;
+    text-decoration-thickness: 1px;
+    text-underline-position: under;
+  }
+
+  &--disabled {
+    color: $bg-light;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

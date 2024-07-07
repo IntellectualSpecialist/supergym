@@ -1,0 +1,67 @@
+.price-card {
+  display: flex;
+  flex-direction: column;
+  padding: 43px 35px;
+  text-align: center;
+  background-color: $base-white;
+  border-width: 7px;
+  border-style: solid;
+  border-color: $base-white;
+
+  &:has(.price-card__button:hover),
+  &:has(.price-card__button:focus),
+  &:has(.price-card__button:active) {
+    border-width: 7px;
+    border-style: solid;
+    border-image: $alt-bg-btn-gradient;
+    border-image-slice: 1;
+  }
+}
+
+.price-card__title {
+  margin-bottom: 18px;
+}
+
+.price-card__description {
+  margin-bottom: 66px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.price-card__price {
+  position: relative;
+  flex-grow: 1;
+  font-size: 48px;
+  line-height: 72px;
+  font-weight: 700;
+  color: $base-secondary;
+
+  &::before {
+    content: attr(data-value);
+    position: absolute;
+    top: -69%;
+    left: 23px;
+    display: block;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 120px;
+    color: $price-shadow;
+    opacity: 0.48;
+    transform: translate(0, 0);
+  }
+}
+
+.price-card__value {
+  position: relative;
+  z-index: 1;
+}
+
+.price-card__value-icon {
+  position: relative;
+  z-index: 1;
+}
+
+.price-card__button {
+  width: 206px;
+  margin-top: 18px;
+}

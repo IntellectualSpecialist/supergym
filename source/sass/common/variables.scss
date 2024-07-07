@@ -1,0 +1,29 @@
+// FONTS
+$primary-font: "Roboto Condensed", "Verdana", sans-serif;
+$secondary-font: "Alumni Sans", "Arial", sans-serif;
+
+// COLORS
+$base-primary: #102654;
+$base-secondary: #103aae;
+$base-white: #ffffff;
+$alt-grey-opacity: rgba(16, 38, 84, 0.5);
+$alt-secondary-gradient: linear-gradient(129deg, #d10a42 0%, #0041ca 100%);
+$bg-dark-blue: #1c3374;
+$bg-btn-gradient: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+$bg-btn-gradient-opacity: linear-gradient(151deg, rgba(237, 2, 51, 0.8) 0%, rgba(0, 62, 183, 0.8) 100%);
+$alt-bg-btn-gradient: linear-gradient(136deg, #d10a42 0%, #00359f 100%);
+$tab-state: #d10a42;
+$bg-light: #f8f9fc;
+$bg-banner: #ed0233;
+$bg-main-gradient: linear-gradient(90deg, #1c3477 0%, #1c3477 0.01%, #1a3578 39.11%, #73184b 75.5%, #b4022a 100%);
+$bg-dark: #030a1a;
+$error-color: #ff121f;
+$price-shadow: #e8e8e8;
+$blue-text: #2e35ac;
+$divider: #74819c;
+$tab-border: rgba(16, 38, 84, 0.2);
+
+// BREAKPOINTS
+$tablet-width: 768px;
+$desktop-width: 1366px;
+$mobile-width-only: 767px;

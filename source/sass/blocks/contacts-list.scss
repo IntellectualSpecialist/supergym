@@ -1,0 +1,38 @@
+.contacts-list {
+  @include list-reset;
+}
+
+.contacts-list__item {
+  margin-bottom: 28px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.contacts-list__title {
+  margin-bottom: 12px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.contacts-list__content {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  color: $base-primary;
+
+  &[href] {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus,
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}

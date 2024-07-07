@@ -1,0 +1,32 @@
+.features {
+  padding-top: 40px;
+  padding-bottom: 32px;
+  background-color: $bg-light;
+}
+
+.features__title {
+  margin-bottom: 40px;
+}
+
+.features__list {
+  @include list-reset;
+
+  @media (max-width: $mobile-width-only) {
+    width: 100vw;
+    margin-left: calc((((100vw - 320px) / 2) + 15px) * -1);
+  }
+}
+
+
+.features__item {
+  margin-bottom: 35px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--custom {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}

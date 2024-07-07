@@ -1,0 +1,40 @@
+.about {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.about__title {
+  margin-bottom: 12px;
+}
+
+.about__lead {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.about__content {
+  margin-bottom: 36px;
+
+  p {
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    &:not(:first-child) {
+      display: none;
+    }
+  }
+}
+
+.about__media {
+  margin-left: -15px;
+}
+
+.about__image {
+  width: 320px;
+  margin-bottom: 36px;
+
+  img {
+    display: block;
+  }
+}

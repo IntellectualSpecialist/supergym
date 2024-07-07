@@ -1,0 +1,29 @@
+.review-card {
+  padding: 30px 20px;
+  text-align: center;
+  color: $base-white;
+  background-color: $bg-dark-blue;
+}
+
+.review-card__image {
+  margin-bottom: 10px;
+
+  img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+}
+
+.review-card__text {
+  h3 {
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+
+  blockquote {
+    margin: 0;
+  }
+}

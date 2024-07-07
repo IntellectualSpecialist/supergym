@@ -1,0 +1,78 @@
+.field {
+  position: relative;
+  display: block;
+  padding-bottom: 24px;
+
+  &:has(input:focus),
+  &:has(input:not(:placeholder-shown)) {
+    .field__label {
+      opacity: 0;
+    }
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0 4px 4px;
+    font-size: 14px;
+    line-height: 22px;
+    color: $base-white;
+    border: 1px solid transparent;
+    border-bottom-color: $divider;
+    background-color: transparent;
+
+    &:hover {
+      border-color: $base-white;
+    }
+
+    &:focus {
+      border: 1px solid $base-white;
+      outline: none;
+    }
+
+    &:disabled {
+      color: rgba($base-white, 0.4);
+      border-bottom-color: rgba($divider, 0.3);
+      pointer-events: none;
+
+      &:hover {
+        border-color: transparent;
+        border-bottom-color: rgba($divider, 0.3);
+      }
+    }
+
+    &:user-invalid {
+      border-bottom-color: $error-color;
+    }
+  }
+
+  input::placeholder {
+    color: $base-white;
+    opacity: 0.7;
+  }
+}
+
+.field--invalid {
+  input {
+    border-bottom-color: $error-color;
+  }
+}
+
+.field__label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.field__error-message {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: $error-color;
+}
