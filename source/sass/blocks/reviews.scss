@@ -11,3 +11,14 @@
   width: 240px;
   margin: 0 auto;
 }
+
+@media (min-width: $tablet-width) {
+  .reviews {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .reviews__slider {
+    width: 100%;
+  }
+}

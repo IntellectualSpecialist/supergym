@@ -10,6 +10,7 @@
   text-decoration: none;
   background-color: transparent;
   border: 2px solid $base-primary;
+  cursor: pointer;
 
   &:hover {
     padding: 24px 27px;
@@ -42,12 +43,12 @@
   }
 
   &--secondary {
-    padding: 22px 27px;
+    padding: 22px 25px;
     color: $base-white;
     border-color: $base-white;
 
     &:hover {
-      padding: 22px 27px;
+      padding: 22px 25px;
       color: $base-secondary;
       background-color: $base-white;
       background-image: none;
@@ -61,7 +62,7 @@
     }
 
     &:active {
-      padding: 22px 27px;
+      padding: 22px 25px;
       color: $base-primary;
       background-color: $base-white;
       background-image: none;
@@ -77,5 +78,31 @@
   &--secondary-disabled {
     opacity: 0.5;
     pointer-events: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    padding: 25px 27px;
+
+    &:hover {
+      padding: 27px 29px;
+    }
+
+    &:active {
+      padding: 27px 29px;
+    }
+
+    &--secondary {
+      padding: 25px 27px;
+
+      &:hover {
+        padding: 25px 27px;
+      }
+
+      &:active {
+        padding: 25px 27px;
+      }
+    }
   }
 }

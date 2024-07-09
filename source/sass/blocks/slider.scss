@@ -1,0 +1,96 @@
+.slider {
+  position: relative;
+}
+
+.slider__wrapper {
+  align-items: stretch;
+}
+
+.slider .slider__button {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: transparent;
+
+  &::after {
+    content: "";
+    display: block;
+    background-color: $base-primary;
+    width: 16px;
+    height: 32px;
+    mask-image: url("../../__spritemap#sprite-slider-arrow-view");
+    mask-repeat: no-repeat;
+    mask-size: 17px 31px;
+    mask-position: center;
+  }
+
+  &:hover {
+    border-color: $base-primary;
+  }
+
+  &:focus {
+    border-color: $base-primary;
+    background-color: $price-shadow;
+  }
+
+  &:active {
+    border-color: $base-primary;
+    background-color: $base-primary;
+
+    &::after {
+      background-color: $base-white;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+
+    &:hover {
+      border: none;
+      background-color: transparent;
+    }
+  }
+
+  &--disabled {
+    opacity: 0.3;
+    pointer-events: none;
+
+    &:focus {
+      border-color: transparent;
+      background-color: transparent;
+    }
+  }
+
+  &--prev {
+    left: -10px;
+    transform: rotate(180deg);
+  }
+
+  &--next {
+    right: -10px;
+  }
+}
+
+.slider .slider__slide {
+  height: auto;
+}
+
+@media (min-width: $tablet-width) {
+  .slider {
+    position: relative;
+    padding-left: 59px;
+    padding-right: 59px;
+
+    .slider__button {
+      display: flex;
+    }
+
+    &--reviews {
+      padding-left: 89px;
+      padding-right: 89px;
+    }
+  }
+}

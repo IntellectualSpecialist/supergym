@@ -1,5 +1,6 @@
 .review-card {
   padding: 30px 20px;
+  height: 100%;
   text-align: center;
   color: $base-white;
   background-color: $bg-dark-blue;
@@ -11,6 +12,8 @@
   img {
     display: block;
     margin: 0 auto;
+    width: 68px;
+    height: 68px;
     border-radius: 50%;
   }
 }
@@ -25,5 +28,40 @@
 
   blockquote {
     margin: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .review-card {
+    display: flex;
+    column-gap: 40px;
+    padding: 40px 30px;
+    text-align: left;
+  }
+
+  .review-card__image {
+    flex-shrink: 0;
+
+    img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .review-card__text {
+    h3 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 22px;
+      line-height: 22px;
+    }
+
+    blockquote {
+      margin: 0;
+    }
+
+    br {
+      display: none;
+    }
   }
 }

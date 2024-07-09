@@ -1,13 +1,13 @@
-.faq-tab {
+.accordion-item {
   padding-top: 20px;
   padding-bottom: 12px;
 }
 
-.faq-tab__header {
+.accordion-item__header {
   display: flex;
   column-gap: 22px;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 8px;
 
   h3 {
@@ -18,12 +18,11 @@
   }
 }
 
-.faq-tab__button {
+.accordion-item__button {
   position: relative;
   flex-shrink: 0;
   width: 30px;
   height: 30px;
-  margin-top: 5px;
   background-color: transparent;
   border: 1px solid $bg-dark-blue;
   border-radius: 50%;
@@ -88,7 +87,7 @@
   }
 }
 
-.faq-tab__button--disabled {
+.accordion-item__button--disabled {
   opacity: 0.3;
   pointer-events: none;
 
@@ -102,7 +101,7 @@
   }
 }
 
-.faq-tab--active .faq-tab__button {
+.accordion-item--active .accordion-item__button {
   background-color: $bg-dark-blue;
 
   &::before,
@@ -123,23 +122,63 @@
   }
 }
 
-.faq-tab__content {
+.accordion-item__content {
   max-height: 0;
   padding-right: 26px;
-  margin-top: 12px;
   transition: max-height 0.3s ease-in;
   overflow: hidden;
 
   p {
     margin-top: 8px;
     margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 20px;
   }
 }
 
-.faq-tab--active {
-  .faq-tab__content {
+.accordion-item--active {
+  .accordion-item__content {
     max-height: 300px;
     overflow: scroll;
     scrollbar-width: none;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .accordion-item {
+    padding-top: 23px;
+    padding-bottom: 15px;
+  }
+
+  .accordion-item__header {
+    h3 {
+      width: 500px;
+      vertical-align: middle;
+      font-size: 22px;
+      line-height: 22px;
+      font-weight: 400;
+    }
+  }
+
+  .accordion-item__button {
+    margin-top: 0;
+    width: 40px;
+    height: 40px;
+
+    &::before,
+    &::after {
+      width: 20px;
+    }
+  }
+
+  .accordion-item__content {
+    width: 560px;
+    padding-right: 0;
+
+    p {
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 }

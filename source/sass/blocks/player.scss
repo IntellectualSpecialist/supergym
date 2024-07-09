@@ -1,7 +1,5 @@
 .player {
   position: relative;
-  width: 320px;
-  height: 170px;
 }
 
 .player__video {
@@ -40,7 +38,7 @@
   border-radius: 50%;
   border: none;
   color: $base-white;
-  background: $bg-btn-gradient;
+  background-image: $bg-btn-gradient;
   transform: translate(-50%, -50%);
   cursor: pointer;
 
@@ -58,47 +56,77 @@
     border-radius: 50%;
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    margin-left: 2px;
+    background-color: $base-white;
+    background-position: center right;
+    mask-image: url("../../__spritemap#sprite-play-icon-view");
+    transform: translate(-50%, -50%);
+  }
+
   &:hover {
-    color: rgba(16, 38, 84, 0.6);
-    background: $base-white;
+    background-color: $base-white;
+    background-image: none;
 
     &::before {
       border-color: $base-primary;
       opacity: 0.6;
     }
+
+    &::after {
+      background-color: rgba(16, 38, 84, 0.6);
+    }
   }
 
   &:focus {
-    color: $base-primary;
-    background: #c8c9cc;
+    background-color: #c8c9cc;
+    background-image: none;
 
     &::before {
       border-color: $base-primary;
       opacity: 1;
+    }
+
+    &::after {
+      background-color: $base-primary;
     }
   }
 
   &:active {
     width: 42px;
     height: 42px;
-    color: $base-primary;
-    background: $base-white;
+    background-color: $base-white;
+    background-image: none;
 
     &::before {
       border-color: $base-primary;
       opacity: 1;
     }
+
+    &::after {
+      background-color: $base-primary;
+    }
   }
 
   &:disabled {
-    color: $base-primary;
-    background: $base-white;
+    background-color: $base-white;
+    background-image: none;
     opacity: 0.4;
     pointer-events: none;
 
     &::before {
       border-color: $base-primary;
       opacity: 1;
+    }
+
+    &::after {
+      background-color: $base-primary;
     }
   }
 }

@@ -61,12 +61,8 @@
   }
 }
 
-
 .faq-tabs__tab {
-  @include list-reset;
-
   display: none;
-  border-top: 1px solid $divider;
 
   &--current {
     display: block;
@@ -75,4 +71,26 @@
 
 .faq-tabs__tab-item {
   border-bottom: 1px solid $divider;
+}
+
+@media (min-width: $tablet-width) {
+  .faq-tabs__list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 45px;
+  }
+
+  .faq-tabs__button {
+    padding: 17px 23px;
+    font-size: 18px;
+    line-height: 18px;
+
+    &:active {
+      padding: 18px 24px;
+    }
+
+    &--active {
+      padding: 18px 24px;
+    }
+  }
 }

@@ -9,7 +9,6 @@
 
 .nav-list__link {
   padding: 4px 9px;
-  font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   color: $base-white;
@@ -46,5 +45,17 @@
     &:focus {
       border-color: transparent;
     }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .nav-list {
+    column-gap: 10px;
+    justify-content: center;
+  }
+
+  .nav-list__link {
+    font-size: 14px;
+    line-height: 20px;
   }
 }

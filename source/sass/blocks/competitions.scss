@@ -16,3 +16,23 @@
   width: 260px;
   margin: 0 auto;
 }
+
+@media (min-width: $tablet-width) {
+  .competitions__about {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .competitions__juri {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+
+  .competitions__subtitle {
+    margin-bottom: 46px;
+  }
+
+  .competitions__slider {
+    width: 678px;
+  }
+}

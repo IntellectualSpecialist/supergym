@@ -30,3 +30,31 @@
     margin-bottom: 40px;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .features__title {
+    margin-bottom: 50px;
+  }
+
+  .features__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 40px;
+  }
+
+  .features__item {
+    margin-bottom: 0;
+
+    &--custom {
+      grid-column: 1 / -1;
+      width: 320px;
+      margin: 0 auto;
+    }
+  }
+}

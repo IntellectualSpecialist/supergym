@@ -8,3 +8,15 @@
 .registry__title {
   margin-bottom: 36px;
 }
+
+@media (min-width: $tablet-width) {
+  .registry {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .registry__form {
+    width: 440px;
+    margin: 0 auto;
+  }
+}

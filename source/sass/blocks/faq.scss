@@ -7,3 +7,14 @@
 .faq__title {
   margin-bottom: 35px;
 }
+
+@media (min-width: $tablet-width) {
+  .faq {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .faq__title {
+    margin-bottom: 45px;
+  }
+}

@@ -8,6 +8,8 @@
 }
 
 .about__lead {
+  margin: 0;
+  margin-bottom: 36px;
   font-size: 18px;
   line-height: 20px;
   font-weight: 400;
@@ -30,11 +32,58 @@
   margin-left: -15px;
 }
 
+.about__player {
+  width: 320px;
+  height: 170px;
+}
+
 .about__image {
   width: 320px;
+  height: 280px;
   margin-bottom: 36px;
 
   img {
     display: block;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .about {
+    padding-top: 60px;
+    padding-bottom: 120px;
+    text-align: center;
+  }
+
+  .about__title {
+    margin-bottom: 20px;
+  }
+
+  .about__lead {
+    font-size: 20px;
+  }
+
+  .about__content {
+    width: 502px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about__image {
+    width: 678px;
+    height: 345px;
+    margin: 0 auto;
+  }
+
+  .about__media {
+    position: relative;
+    margin-left: 0;
+  }
+
+  .about__player {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 270px;
+    transform: translate(-50%, -50%);
   }
 }

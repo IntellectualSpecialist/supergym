@@ -2,8 +2,17 @@
   display: flex;
   padding-top: 16px;
   padding-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 31px;
+    padding-bottom: 31px;
+  }
 }
 
 .promo-header__logo {
   margin-right: auto;
+}
+
+.promo-header__phone {
+  margin-left: auto;
 }

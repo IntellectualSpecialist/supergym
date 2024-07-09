@@ -11,4 +11,30 @@
 
 .main-footer__nav {
   margin-bottom: 25px;
+  margin-left: -10px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-footer {
+    padding-top: 45px;
+    padding-bottom: 48px;
+  }
+
+  .main-footer__wrapper {
+    display: flex;
+  }
+
+  .main-footer__logo {
+    margin-bottom: 0;
+    margin-right: auto;
+  }
+
+  .main-footer__nav {
+    width: 430px;
+    margin: 0 auto;
+  }
+
+  .main-footer__social {
+    margin-left: auto;
+  }
 }

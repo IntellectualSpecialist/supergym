@@ -24,12 +24,14 @@
 
 .price-card__description {
   margin-bottom: 66px;
-  font-size: 14px;
-  line-height: 22px;
 }
 
 .price-card__price {
   position: relative;
+  display: flex;
+  column-gap: 10px;
+  width: fit-content;
+  margin: 0 auto;
   flex-grow: 1;
   font-size: 48px;
   line-height: 72px;
@@ -39,15 +41,15 @@
   &::before {
     content: attr(data-value);
     position: absolute;
-    top: -69%;
-    left: 23px;
+    top: 0;
+    left: -15px;
     display: block;
     font-weight: 700;
     font-size: 80px;
     line-height: 120px;
     color: $price-shadow;
     opacity: 0.48;
-    transform: translate(0, 0);
+    transform: translateY(-40%);
   }
 }
 
@@ -59,9 +61,50 @@
 .price-card__value-icon {
   position: relative;
   z-index: 1;
+
+  svg {
+    width: 24px;
+    height: 33px;
+  }
 }
 
 .price-card__button {
   width: 206px;
-  margin-top: 18px;
+  margin: 18px auto 0;
+}
+
+@media (min-width: $tablet-width) {
+  .price-card {
+    padding: 58px;
+  }
+
+  .price-card__title {
+    margin-bottom: 22px;
+  }
+
+  .price-card__description {
+    margin-bottom: 82px;
+  }
+
+  .price-card__price {
+    column-gap: 14px;
+    font-size: 60px;
+    line-height: 90px;
+
+    &::before {
+      font-size: 100px;
+      line-height: 150px;
+    }
+  }
+
+  .price-card__value-icon {
+    svg {
+      width: 32px;
+      height: 42px;
+    }
+  }
+
+  .price-card__button {
+    margin-top: 22px;
+  }
 }

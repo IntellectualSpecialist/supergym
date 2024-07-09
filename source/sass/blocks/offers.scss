@@ -27,3 +27,29 @@
     }
   }
 }
+
+@media (min-width: $tablet-width) {
+  .offers {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .offers__title {
+    margin-bottom: 35px;
+  }
+
+  .offers__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 35px;
+  }
+
+  .offers__item {
+    margin-bottom: 0;
+
+    &--custom {
+      grid-column: 1 / -1;
+    }
+  }
+}

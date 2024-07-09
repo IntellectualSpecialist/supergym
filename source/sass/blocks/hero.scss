@@ -1,7 +1,7 @@
 .hero {
   padding-bottom: 32px;
   color: $base-white;
-  background-color: $bg-main-gradient;
+  background-image: $bg-main-gradient;
 }
 
 .hero__header {
@@ -9,6 +9,8 @@
 }
 
 .hero__image {
+  flex-shrink: 0;
+
   @media (max-width: $mobile-width-only) {
     display: none;
   }
@@ -24,7 +26,6 @@
   @include list-reset;
 
   flex-shrink: 0;
-  font-size: 14px;
   line-height: 20px;
   font-weight: 400;
 }
@@ -53,4 +54,48 @@
 
 .hero__button {
   margin-top: 48px;
+}
+
+@media (min-width: $tablet-width) {
+  .hero {
+    padding-bottom: 100px;
+  }
+
+  .hero__header {
+    margin-bottom: 0;
+  }
+
+  .hero__columns {
+    display: flex;
+    column-gap: 30px;
+    justify-content: space-between;
+  }
+
+  .hero__info {
+    align-self: center;
+  }
+
+  .hero__city {
+    margin-bottom: 10px;
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  .hero__title {
+    font-size: 72px;
+    line-height: 85px;
+    letter-spacing: 0.03em;
+  }
+
+  .hero__list {
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .hero__button {
+    width: 185px;
+    margin-left: auto;
+    margin-top: 50px;
+  }
 }

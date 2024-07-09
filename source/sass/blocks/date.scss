@@ -1,5 +1,7 @@
 .date {
   margin: 0;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .date__item {
@@ -35,4 +37,28 @@
   font-size: 12px;
   line-height: 12px;
   font-weight: 400;
+}
+
+@media (min-width: $tablet-width) {
+  .date {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .date__item {
+    margin-bottom: 10px;
+  }
+
+  .date__value {
+    time {
+      align-items: center;
+      gap: 5px;
+    }
+  }
+
+  .date__small-text {
+    width: 37px;
+    font-size: 14px;
+    line-height: 22px;
+  }
 }

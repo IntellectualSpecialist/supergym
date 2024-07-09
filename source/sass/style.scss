@@ -1,5 +1,6 @@
 // VENDOR
 @import "vendor/normalize";
+@import "vendor/swiper";
 
 // GLOBAL
 @import "common/fonts";
@@ -20,10 +21,12 @@
 @import "blocks/price-card";
 @import "blocks/banner";
 @import "blocks/date";
+@import "blocks/slider";
 @import "blocks/juri-card";
 @import "blocks/features-card";
 @import "blocks/offers-card";
-@import "blocks/faq-tab";
+@import "blocks/accordion";
+@import "blocks/accordion-item";
 @import "blocks/review-card";
 @import "blocks/field";
 @import "blocks/contacts-list";

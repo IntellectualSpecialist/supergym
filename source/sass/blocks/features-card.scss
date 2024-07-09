@@ -1,4 +1,6 @@
 .features-card {
+  display: flex;
+  flex-direction: column;
   padding: 0 15px;
   text-align: center;
 }
@@ -6,6 +8,7 @@
 .features-card__content {
   width: 290px;
   margin: 0 auto;
+  flex-grow: 1;
 
   h3 {
     margin-top: 12px;
@@ -35,7 +38,6 @@
 
   span {
     display: block;
-    font-size: 14px;
     line-height: 20px;
     font-weight: 400;
     color: $blue-text;
@@ -62,8 +64,64 @@
   }
 
   h3 {
+    margin-top: 5px;
+    margin-bottom: 20px;
     font-size: 22px;
     line-height: 22px;
     font-weight: 700;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .features-card {
+    padding: 0;
+    text-align: left;
+  }
+
+  .features-card__content {
+    display: flex;
+    column-gap: 15px;
+    width: auto;
+
+    h3 {
+      margin-top: 0;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  .features-card__stats {
+    margin-bottom: 0;
+
+    b {
+      font-size: 70px;
+      line-height: 70px;
+    }
+
+    span {
+      display: block;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  .features-card--dark {
+    padding: 35px;
+
+    .features-card__content {
+      display: block;
+      text-align: center;
+    }
+
+    .features-card__stats {
+      margin-bottom: 25px;
+    }
+
+    h3 {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      font-size: 24px;
+      line-height: 24px;
+    }
   }
 }

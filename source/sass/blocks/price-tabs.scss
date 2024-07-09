@@ -65,3 +65,18 @@
     margin-bottom: 0;
   }
 }
+
+
+@media (min-width: $tablet-width) {
+  .price-tabs__list {
+    width: 310px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 45px;
+  }
+
+  .price-tabs__button {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
