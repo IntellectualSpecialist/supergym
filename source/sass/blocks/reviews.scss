@@ -1,10 +1,10 @@
 .reviews {
-  padding-top: 40px;
+  padding-top: 41px;
   padding-bottom: 40px;
 }
 
 .reviews__title {
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 }
 
 .reviews__slider {
@@ -18,8 +18,13 @@
     padding-bottom: 60px;
   }
 
+  .reviews__title {
+    margin-bottom: 35px;
+  }
+
   .reviews__slider {
-    width: 100%;
+    width: calc(100% + 18px);
+    margin-left: -9px;
   }
 }
 
@@ -34,6 +39,7 @@
   }
 
   .reviews__slider {
-    width: 778px;
+    width: 802px;
+    margin: 0 auto;
   }
 }

@@ -6,9 +6,10 @@
 }
 
 .features-card__content {
+  flex-grow: 1;
   width: 290px;
   margin: 0 auto;
-  flex-grow: 1;
+  padding: 0 18px;
 
   h3 {
     margin-top: 12px;
@@ -25,7 +26,7 @@
 }
 
 .features-card__stats {
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 
   b {
     font-size: 64px;
@@ -46,12 +47,13 @@
 
 .features-card--dark {
   padding-top: 30px;
-  padding-bottom: 32px;
+  padding-bottom: 31px;
   color: $base-white;
   background-color: $bg-dark-blue;
 
   .features-card__content {
-    width: 170px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   b {
@@ -82,6 +84,7 @@
     display: flex;
     column-gap: 15px;
     width: auto;
+    padding: 0;
 
     h3 {
       margin-top: 0;
@@ -107,6 +110,7 @@
 
   .features-card--dark {
     padding: 35px;
+    padding-bottom: 27px;
 
     .features-card__content {
       display: block;
@@ -127,12 +131,10 @@
 }
 
 @media (min-width: $desktop-width) {
-  .features-card {
-    padding-bottom: 18px;
-  }
-
   .features-card__content {
     column-gap: 43px;
+    width: 100%;
+    justify-content: space-between;
 
     h3 {
       margin-bottom: 8px;
@@ -141,19 +143,28 @@
     }
   }
 
+  .features-card__text {
+    width: 210px;
+  }
+
   .features-card--dark {
     padding: 58px 40px 38px;
 
     .features-card__content {
       width: auto;
+      padding: 0;
     }
 
     .features-card__stats {
       margin-bottom: 10px;
     }
 
+    .features-card__text {
+      width: auto;
+    }
+
     h3 {
-      margin-top: 10;
+      margin-top: 10px;
       margin-bottom: 30px;
       font-size: 26px;
       line-height: 26px;

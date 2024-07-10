@@ -1,5 +1,5 @@
 .features {
-  padding-top: 40px;
+  padding-top: 41px;
   padding-bottom: 32px;
   background-color: $bg-light;
 }
@@ -19,26 +19,26 @@
 
 
 .features__item {
-  margin-bottom: 35px;
+  margin-bottom: 27px;
 
   &:last-child {
     margin-bottom: 0;
   }
 
   &--custom {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 31px;
+    margin-bottom: 41px;
   }
 }
 
 @media (min-width: $tablet-width) {
   .features {
-    padding-top: 60px;
+    padding-top: 61px;
     padding-bottom: 60px;
   }
 
   .features__title {
-    margin-bottom: 50px;
+    margin-bottom: 49px;
   }
 
   .features__list {

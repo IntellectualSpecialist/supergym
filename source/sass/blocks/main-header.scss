@@ -9,19 +9,24 @@
 }
 
 .main-header__phone {
+  margin-top: -1px;
   margin-left: auto;
 }
 
 @media (min-width: $tablet-width) {
   .main-header {
     padding-top: 31px;
-    padding-bottom: 31px;
+    padding-bottom: 30px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .main-header {
     padding-top: 30px;
-    padding-bottom: 30px;
+  }
+
+  .main-header__phone {
+    margin-top: 2px;
+    margin-left: auto;
   }
 }

@@ -41,12 +41,13 @@
 
 @media (min-width: $tablet-width) {
   .date {
+    padding-top: 3px;
     font-size: 18px;
     line-height: 24px;
   }
 
   .date__item {
-    margin-bottom: 10px;
+    margin-bottom: 13px;
   }
 
   .date__value {
@@ -64,13 +65,17 @@
 }
 
 @media (min-width: $desktop-width) {
+  .date {
+    padding-top: 0;
+  }
+
   .date__definition {
     margin-bottom: 6px;
-    padding-bottom: 6px;
+    padding-bottom: 8px;
   }
 
   .date__item {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
   }
 
   .date__value {

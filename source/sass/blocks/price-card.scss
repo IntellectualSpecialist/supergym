@@ -1,7 +1,7 @@
 .price-card {
   display: flex;
   flex-direction: column;
-  padding: 43px 35px;
+  padding: 44px 35px 43px;
   text-align: center;
   background-color: $base-white;
   border-width: 7px;
@@ -22,7 +22,7 @@
 
 .price-card__description {
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .price-card__price {
@@ -69,7 +69,7 @@
 
 .price-card__button {
   width: 206px;
-  margin: 18px auto 0;
+  margin: 19px auto 0;
 }
 
 @media (min-width: $tablet-width) {
@@ -82,12 +82,12 @@
   }
 
   .price-card__description {
-    margin-bottom: 18px;
+    margin-bottom: 22px;
   }
 
   .price-card__price {
     column-gap: 14px;
-    padding: 50px 42px 0;
+    padding: 60px 42px 0;
     font-size: 60px;
     line-height: 90px;
 
@@ -106,11 +106,16 @@
   }
 
   .price-card__button {
+    width: 100%;
     margin-top: 22px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .price-card {
+    padding: 58px 57px;
+  }
+
   .price-card__title {
     margin-bottom: 17px;
   }

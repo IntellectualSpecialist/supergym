@@ -11,7 +11,7 @@
 
 .price-tabs__button {
   padding: 0;
-  padding-bottom: 12px;
+  padding-bottom: 6px;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
@@ -19,7 +19,7 @@
   text-decoration: underline;
   text-decoration-color: transparent;
   text-decoration-thickness: 2px;
-  text-underline-offset: 10px;
+  text-underline-offset: 4px;
   text-underline-position: under;
   background-color: transparent;
   border: none;
@@ -79,6 +79,10 @@
     font-size: 18px;
     line-height: 18px;
   }
+
+  .price-tabs__price-card {
+    margin-bottom: 40px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -88,9 +92,10 @@
   }
 
   .price-tabs__button {
+    padding-bottom: 8px;
     font-size: 20px;
     line-height: 20px;
-    text-underline-offset: 9px;
+    text-underline-offset: 5px;
   }
 
   .price-tabs__price-cards {

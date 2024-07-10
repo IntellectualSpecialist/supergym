@@ -6,18 +6,18 @@
 }
 
 .main-footer__logo {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .main-footer__nav {
-  margin-bottom: 25px;
+  margin-bottom: 28px;
   margin-left: -10px;
 }
 
 @media (min-width: $tablet-width) {
   .main-footer {
     padding-top: 45px;
-    padding-bottom: 48px;
+    padding-bottom: 45px;
   }
 
   .main-footer__wrapper {
@@ -51,6 +51,7 @@
   }
 
   .main-footer__social {
+    width: auto;
     max-width: 140px;
   }
 }

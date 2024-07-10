@@ -1,6 +1,6 @@
 .button {
   display: block;
-  padding: 22px 25px;
+  padding: 25px 27px;
   font-size: 12px;
   line-height: 12px;
   font-weight: 700;
@@ -13,7 +13,7 @@
   cursor: pointer;
 
   &:hover {
-    padding: 24px 27px;
+    padding: 27px 29px;
     color: $base-white;
     background-image: $bg-btn-gradient;
     border: none;
@@ -26,7 +26,7 @@
   }
 
   &:active {
-    padding: 24px 27px;
+    padding: 27px 29px;
     color: rgba($base-white, 0.7);
     background-image: $bg-btn-gradient;
     border: none;
@@ -94,6 +94,34 @@
     }
 
     &--secondary {
+      padding: 25px 27px;
+
+      &:hover {
+        padding: 25px 27px;
+      }
+
+      &:active {
+        padding: 25px 27px;
+      }
+    }
+
+    &--promo {
+      padding: 20px 27px;
+
+      &:hover {
+        padding: 20px 27px;
+      }
+
+      &:active {
+        padding: 20px 27px;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button {
+    &--promo {
       padding: 25px 27px;
 
       &:hover {

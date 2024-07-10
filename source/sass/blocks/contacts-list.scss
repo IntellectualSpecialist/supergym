@@ -3,7 +3,7 @@
 }
 
 .contacts-list__item {
-  margin-bottom: 28px;
+  margin-bottom: 27px;
 
   &:last-child {
     margin-bottom: 0;
@@ -12,7 +12,7 @@
 
 .contacts-list__title {
   margin-top: 0;
-  margin-bottom: 12px;
+  margin-bottom: 13px;
   font-size: 20px;
   line-height: 20px;
   font-weight: 400;
@@ -44,7 +44,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 60px;
-    row-gap: 15px;
+    row-gap: 13px;
 
     &::before {
       content: "";

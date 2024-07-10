@@ -5,7 +5,7 @@
 }
 
 .hero__header {
-  margin-bottom: 48px;
+  margin-bottom: 50px;
 }
 
 .hero__image {
@@ -48,12 +48,12 @@
   font-size: 62px;
   line-height: 62px;
   font-weight: 800;
-  letter-spacing: 0.02em;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 .hero__button {
-  margin-top: 48px;
+  margin-top: 47px;
 }
 
 @media (min-width: $tablet-width) {
@@ -88,7 +88,7 @@
   .hero__title {
     font-size: 72px;
     line-height: 85px;
-    letter-spacing: 0.03em;
+    letter-spacing: 2px;
   }
 
   .hero__list {
@@ -100,7 +100,7 @@
   .hero__button {
     width: 185px;
     margin-left: auto;
-    margin-top: 50px;
+    margin-top: 49px;
   }
 
   .hero__image {
@@ -118,7 +118,7 @@
   }
 
   .hero__header {
-    margin-bottom: 30px;
+    margin-bottom: 28px;
   }
 
   .hero__columns {
@@ -149,6 +149,7 @@
   .hero__title {
     font-size: 92px;
     line-height: 110px;
+    letter-spacing: 4px;
   }
 
   .hero__button {
