@@ -6,12 +6,12 @@
   gap: 10px;
   justify-content: space-between;
   margin-bottom: 30px;
-  padding-bottom: 8px;
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
 }
 
 .price-tabs__button {
   padding: 0;
+  padding-bottom: 12px;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
@@ -78,5 +78,28 @@
   .price-tabs__button {
     font-size: 18px;
     line-height: 18px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .price-tabs__list {
+    width: 350px;
+    margin-bottom: 40px;
+  }
+
+  .price-tabs__button {
+    font-size: 20px;
+    line-height: 20px;
+    text-underline-offset: 9px;
+  }
+
+  .price-tabs__price-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  .price-tabs__price-card {
+    margin-bottom: 0;
   }
 }

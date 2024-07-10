@@ -65,3 +65,10 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .review-card {
+    column-gap: 30px;
+    padding: 60px;
+  }
+}

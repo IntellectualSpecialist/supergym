@@ -46,3 +46,15 @@
     }
   }
 }
+
+@media (min-width: $tablet-width) {
+  .social {
+    gap: 15px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .social {
+    gap: 10px;
+  }
+}

@@ -154,10 +154,8 @@
   .accordion-item__header {
     h3 {
       width: 500px;
-      vertical-align: middle;
       font-size: 22px;
       line-height: 22px;
-      font-weight: 400;
     }
   }
 
@@ -180,5 +178,21 @@
       font-size: 18px;
       line-height: 24px;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .accordion-item__header {
+    margin-bottom: 15px;
+
+    h3 {
+      width: 660px;
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+
+  .accordion-item__content {
+    width: 660px;
   }
 }

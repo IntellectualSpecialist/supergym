@@ -51,6 +51,7 @@
 @media (min-width: $tablet-width) {
   .banner {
     display: flex;
+    justify-content: space-between;
 
     &--alternative {
       .banner__image {
@@ -90,6 +91,45 @@
     img {
       width: 378px;
       height: 348px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .banner {
+    &--alternative {
+      .banner__image {
+        img {
+          width: 280px;
+          height: 460px;
+        }
+      }
+    }
+  }
+
+  .banner__info {
+    padding: 60px 80px 98px;
+  }
+
+  .banner__header {
+    gap: 77px;
+    margin-bottom: 30px;
+  }
+
+  .banner__title {
+    width: 168px;
+    font-size: 82px;
+    line-height: 96px;
+  }
+
+  .banner__button {
+    margin-top: 30px;
+  }
+
+  .banner__image {
+    img {
+      width: 660px;
+      height: 500px;
     }
   }
 }

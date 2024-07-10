@@ -1,0 +1,27 @@
+.main-header {
+  display: flex;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.main-header__logo {
+  margin-right: auto;
+}
+
+.main-header__phone {
+  margin-left: auto;
+}
+
+@media (min-width: $tablet-width) {
+  .main-header {
+    padding-top: 31px;
+    padding-bottom: 31px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}

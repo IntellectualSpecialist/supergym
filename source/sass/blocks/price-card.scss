@@ -11,8 +11,6 @@
   &:has(.price-card__button:hover),
   &:has(.price-card__button:focus),
   &:has(.price-card__button:active) {
-    border-width: 7px;
-    border-style: solid;
     border-image: $alt-bg-btn-gradient;
     border-image-slice: 1;
   }
@@ -23,7 +21,8 @@
 }
 
 .price-card__description {
-  margin-bottom: 66px;
+  margin: 0;
+  margin-bottom: 18px;
 }
 
 .price-card__price {
@@ -32,6 +31,7 @@
   column-gap: 10px;
   width: fit-content;
   margin: 0 auto;
+  padding: 48px 37px 0;
   flex-grow: 1;
   font-size: 48px;
   line-height: 72px;
@@ -42,14 +42,13 @@
     content: attr(data-value);
     position: absolute;
     top: 0;
-    left: -15px;
+    left: 22px;
     display: block;
     font-weight: 700;
     font-size: 80px;
     line-height: 120px;
     color: $price-shadow;
     opacity: 0.48;
-    transform: translateY(-40%);
   }
 }
 
@@ -83,15 +82,17 @@
   }
 
   .price-card__description {
-    margin-bottom: 82px;
+    margin-bottom: 18px;
   }
 
   .price-card__price {
     column-gap: 14px;
+    padding: 50px 42px 0;
     font-size: 60px;
     line-height: 90px;
 
     &::before {
+      left: 24px;
       font-size: 100px;
       line-height: 150px;
     }
@@ -106,5 +107,27 @@
 
   .price-card__button {
     margin-top: 22px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .price-card__title {
+    margin-bottom: 17px;
+  }
+
+  .price-card__description {
+    margin-bottom: 17px;
+  }
+
+  .price-card__price {
+    padding: 61px 32px 0;
+
+    &::before {
+      left: 14px;
+    }
+  }
+
+  .price-card__button {
+    margin-top: 17px;
   }
 }

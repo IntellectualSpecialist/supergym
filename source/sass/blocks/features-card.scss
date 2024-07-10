@@ -125,3 +125,38 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .features-card {
+    padding-bottom: 18px;
+  }
+
+  .features-card__content {
+    column-gap: 43px;
+
+    h3 {
+      margin-bottom: 8px;
+      font-size: 22px;
+      line-height: 22px;
+    }
+  }
+
+  .features-card--dark {
+    padding: 58px 40px 38px;
+
+    .features-card__content {
+      width: auto;
+    }
+
+    .features-card__stats {
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      margin-top: 10;
+      margin-bottom: 30px;
+      font-size: 26px;
+      line-height: 26px;
+    }
+  }
+}

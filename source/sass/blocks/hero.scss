@@ -20,6 +20,7 @@
   display: flex;
   column-gap: 21px;
   align-items: flex-end;
+  text-align: right;
 }
 
 .hero__list {
@@ -32,7 +33,6 @@
 
 .hero__title-wrapper {
   font-family: $secondary-font;
-  text-align: right;
 }
 
 .hero__city {
@@ -75,6 +75,10 @@
     align-self: center;
   }
 
+  .hero__text {
+    column-gap: 26px;
+  }
+
   .hero__city {
     margin-bottom: 10px;
     font-size: 42px;
@@ -97,5 +101,65 @@
     width: 185px;
     margin-left: auto;
     margin-top: 50px;
+  }
+
+  .hero__image {
+    img {
+      display: block;
+      width: 324px;
+      height: 390px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .hero {
+    padding-bottom: 120px;
+  }
+
+  .hero__header {
+    margin-bottom: 30px;
+  }
+
+  .hero__columns {
+    display: flex;
+    column-gap: 56px;
+    justify-content: right;
+    padding-right: 72px;
+  }
+
+  .hero__info {
+    width: 385px;
+  }
+
+  .hero__text {
+    column-gap: 0;
+  }
+
+  .hero__list {
+    margin-bottom: 71px;
+  }
+
+  .hero__city {
+    margin-bottom: 40px;
+    font-size: 54px;
+    line-height: 54px;
+  }
+
+  .hero__title {
+    font-size: 92px;
+    line-height: 110px;
+  }
+
+  .hero__button {
+    width: 270px;
+    margin-top: 40px;
+  }
+
+  .hero__image {
+    img {
+      width: 500px;
+      height: 524px;
+    }
   }
 }

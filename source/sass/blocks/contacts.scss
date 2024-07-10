@@ -22,3 +22,14 @@
     margin: 0 auto;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .contacts__wrapper {
+    width: auto;
+    padding-right: 0;
+  }
+
+  .contacts__list {
+    width: auto;
+  }
+}

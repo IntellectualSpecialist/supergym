@@ -36,3 +36,20 @@
     width: 678px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .competitions__about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .competitions__juri {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .competitions__slider {
+    width: 1280px;
+    margin-left: -65px;
+  }
+}

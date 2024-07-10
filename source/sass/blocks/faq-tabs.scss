@@ -94,3 +94,28 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .faq-tabs {
+    display: flex;
+    column-gap: 40px;
+  }
+
+  .faq-tabs__list {
+    display: block;
+    width: 260px;
+    flex-shrink: 0;
+  }
+
+  .faq-tabs__item {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .faq-tabs__content {
+    width: 860px;
+  }
+}

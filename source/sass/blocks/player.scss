@@ -35,6 +35,7 @@
   align-items: center;
   width: 52px;
   height: 52px;
+  padding: 0;
   border-radius: 50%;
   border: none;
   color: $base-white;
@@ -127,6 +128,28 @@
 
     &::after {
       background-color: $base-primary;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .player__button {
+    width: 72px;
+    height: 72px;
+
+    &::before {
+      width: 100px;
+      height: 100px;
+    }
+
+    &::after {
+      width: 17px;
+      height: 17px;
+    }
+
+    &:active {
+      width: 58px;
+      height: 58px;
     }
   }
 }

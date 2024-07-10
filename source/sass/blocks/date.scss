@@ -62,3 +62,19 @@
     line-height: 22px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .date__definition {
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+  }
+
+  .date__item {
+    margin-bottom: 20px;
+  }
+
+  .date__value {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}

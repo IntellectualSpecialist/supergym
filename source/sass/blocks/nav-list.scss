@@ -51,11 +51,16 @@
 @media (min-width: $tablet-width) {
   .nav-list {
     column-gap: 10px;
-    justify-content: center;
   }
 
   .nav-list__link {
     font-size: 14px;
     line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .nav-list {
+    column-gap: 62px;
   }
 }

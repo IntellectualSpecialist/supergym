@@ -1,0 +1,15 @@
+.columns-container {
+  @media (min-width: $desktop-width) {
+    background-image: linear-gradient(90deg, $base-primary, $base-primary 50%, $base-white 50%, $base-white);
+  }
+}
+
+.columns-container__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 1366px;
+    margin: 0 auto;
+    padding: 0 103px;
+  }
+}

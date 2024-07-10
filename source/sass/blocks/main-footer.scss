@@ -30,11 +30,27 @@
   }
 
   .main-footer__nav {
-    width: 430px;
+    max-width: 430px;
     margin: 0 auto;
   }
 
   .main-footer__social {
+    width: 105px;
     margin-left: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .main-footer__nav {
+    max-width: 840px;
+  }
+
+  .main-footer__social {
+    max-width: 140px;
   }
 }

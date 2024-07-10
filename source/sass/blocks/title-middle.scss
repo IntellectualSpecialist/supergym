@@ -20,4 +20,14 @@
       line-height: 54px;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    font-size: 54px;
+    line-height: 54px;
+    text-align: left;
+
+    &--center {
+      text-align: center;
+    }
+  }
 }

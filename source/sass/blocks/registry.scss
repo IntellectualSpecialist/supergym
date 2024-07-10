@@ -20,3 +20,14 @@
     margin: 0 auto;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .registry__wrapper {
+    width: auto;
+    padding-left: 0;
+  }
+
+  .registry__form {
+    width: auto;
+  }
+}
