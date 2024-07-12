@@ -1,5 +1,5 @@
 .form__label {
-  margin-bottom: 11px;
+  margin-bottom: 3px;
 
   &:last-child {
     margin-bottom: 0;
@@ -28,5 +28,20 @@
   .form__button {
     grid-column: 1 / -1;
     margin-top: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form {
+    form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 30px;
+      row-gap: 0;
+    }
+  }
+
+  .form__button {
+    margin-top: 12px;
   }
 }

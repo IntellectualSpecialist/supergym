@@ -13,8 +13,9 @@
   input {
     display: block;
     width: 100%;
+    height: 36px;
     margin: 0;
-    padding: 0 4px 4px;
+    padding: 4px;
     font-size: 14px;
     line-height: 22px;
     color: $base-white;
@@ -23,7 +24,7 @@
     background-color: transparent;
 
     &:hover {
-      border-color: $base-white;
+      border-bottom-color: $base-white;
     }
 
     &:focus {
@@ -62,7 +63,7 @@
 .field__label {
   position: absolute;
   left: 0;
-  top: 2px;
+  top: 10px;
   font-size: 14px;
   line-height: 22px;
   opacity: 0.4;

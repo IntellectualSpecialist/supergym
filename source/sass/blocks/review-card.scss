@@ -20,16 +20,16 @@
 }
 
 .review-card__text {
+  * {
+    margin: 0;
+  }
+
   h3 {
     margin-top: 0;
     margin-bottom: 17px;
     font-size: 18px;
     line-height: 20px;
     font-weight: 400;
-  }
-
-  blockquote {
-    margin: 0;
   }
 }
 
@@ -56,10 +56,6 @@
       margin-bottom: 20px;
       font-size: 22px;
       line-height: 22px;
-    }
-
-    blockquote {
-      margin: 0;
     }
 
     br {

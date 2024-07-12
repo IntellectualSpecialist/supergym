@@ -50,11 +50,14 @@
   &::before {
     content: "";
     position: absolute;
+    top: 50%;
+    left: 50%;
     width: 72px;
     height: 72px;
     border: 2px solid $bg-banner;
     opacity: 0.2;
     border-radius: 50%;
+    transform: translate(-50%, -50%);
   }
 
   &::after {
@@ -66,8 +69,9 @@
     height: 12px;
     margin-left: 2px;
     background-color: $base-white;
-    background-position: center right;
     mask-image: url("../../__spritemap#sprite-play-icon-view");
+    mask-position: center right;
+    mask-repeat: no-repeat;
     transform: translate(-50%, -50%);
   }
 

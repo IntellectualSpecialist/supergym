@@ -27,6 +27,15 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+}
+
+.offers-card__text {
+  flex-grow: 1;
+
+  * {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
 
   h3 {
     margin: 0;
@@ -34,15 +43,6 @@
     line-height: 22px;
     font-weight: 700;
   }
-
-  p {
-    margin-top: 8px;
-    margin-bottom: 8px;
-  }
-}
-
-.offers-card__text {
-  flex-grow: 1;
 }
 
 .offers-card__more-button {
@@ -110,16 +110,12 @@
     margin-bottom: 28px;
   }
 
-  h3 span {
+  h3 * {
     display: block;
     margin-top: 9px;
     font-size: 64px;
     line-height: 64px;
     font-weight: 700;
-  }
-
-  img {
-    margin: 0 auto;
   }
 
   .offers-card__more-button {
@@ -147,6 +143,9 @@
     text-align: left;
 
     &:not(.offers-card--dark) {
+      padding: 20px;
+      padding-bottom: 16px;
+
       .offers-card__content {
         h3 {
           margin-bottom: 10px;
@@ -158,7 +157,7 @@
   }
 
   .offers-card__more-button {
-    margin-top: 13px;
+    margin-top: 14px;
     margin-left: -9px;
     margin-right: 0;
   }
@@ -166,6 +165,11 @@
   .offers-card--dark {
     .offers-card__content {
       padding: 40px 25px 36px;
+    }
+
+    .offers-card__text {
+      font-size: 18px;
+      line-height: 24px;
 
       h3 {
         margin-bottom: 40px;
@@ -173,15 +177,10 @@
         line-height: 24px;
       }
 
-      h3 span {
+      h3 * {
         margin-top: 20px;
         font-size: 70px;
         line-height: 70px;
-      }
-
-      p {
-        font-size: 18px;
-        line-height: 24px;
       }
     }
   }
@@ -190,14 +189,16 @@
 @media (min-width: $desktop-width) {
   .offers-card {
     &:not(.offers-card--dark) {
-      padding: 22px 21px 17px;
+      padding: 20px 20px 17px;
     }
 
     &--dark {
       .offers-card__content {
         padding-left: 45px;
         padding-right: 45px;
+      }
 
+      .offers-card__text {
         h3 {
           font-size: 26px;
           line-height: 26px;
@@ -207,6 +208,6 @@
   }
 
   .offers-card__more-button {
-    margin-top: 21px;
+    margin-top: 23px;
   }
 }

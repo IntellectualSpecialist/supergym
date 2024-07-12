@@ -6,7 +6,7 @@
 }
 
 .registry__title {
-  margin-bottom: 34px;
+  margin-bottom: 26px;
 }
 
 @media (min-width: $tablet-width) {
@@ -22,9 +22,22 @@
 }
 
 @media (min-width: $desktop-width) {
+  .registry {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    // border-top: 1px solid $base-primary;
+  }
+
   .registry__wrapper {
-    width: auto;
+    width: 580px;
+    margin-left: auto;
+    margin-right: 0;
     padding-left: 0;
+    padding-right: 103px;
+  }
+
+  .registry__title {
+    margin-bottom: 27px;
   }
 
   .registry__form {

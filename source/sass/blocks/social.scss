@@ -3,6 +3,7 @@
 
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 20px;
 }
 
@@ -51,10 +52,26 @@
   .social {
     gap: 15px;
   }
+
+  .social__link {
+    svg,
+    img {
+      margin-top: 1px;
+      margin-left: 1px;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
   .social {
     gap: 10px;
+  }
+
+  .social__link {
+    svg,
+    img {
+      margin-top: 0;
+      // margin-left: 0;
+    }
   }
 }

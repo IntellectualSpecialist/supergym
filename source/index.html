@@ -60,7 +60,7 @@
           <div class="about__text">
             <h2 class="about__title title-middle">Тренажёрный зал</h2>
             <p class="about__lead">Просторный зал площадью 900 кв/м</p>
-            <div class="about__content">
+            <div class="about__content text-content">
               <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
               <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажёрами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
             </div>
@@ -159,8 +159,8 @@
       </section>
       <article class="competitions">
         <h2 class="visually-hidden">Соревнования «Super Games»</h2>
-        <div class="competitions__wrapper container">
-          <section class="competitions__about" data-test="games">
+        <section class="competitions__about" data-test="games">
+          <div class="competitions__about-wrapper container">
             <h3 class="visually-hidden">Общая информация</h3>
             <article class="banner">
               <div class="banner__info">
@@ -198,8 +198,10 @@
                 </picture>
               </div>
             </article>
-          </section>
-          <section class="competitions__juri" data-test="juri">
+          </div>
+        </section>
+        <section class="competitions__juri" data-test="juri">
+          <div class="competitions__juri-wrapper container">
             <h3 class="competitions__subtitle title-middle title-middle--center title-middle--alternative">Жюри</h3>
             <div class="competitions__slider slider slider--juri">
               <div class="slider__swiper swiper">
@@ -381,8 +383,8 @@
                 <span class="visually-hidden">Cледующий слайд</span>
               </button>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
       </article>
       <section class="features" data-test="features">
         <div class="features__wrapper container">
@@ -753,54 +755,52 @@
         </div>
       </section>
       <div class="columns-container" data-test="form">
-        <div class="columns-container__wrapper">
-          <section class="registry">
-            <div class="registry__wrapper container">
-              <h2 class="registry__title title-middle title-middle--alternative">Бесплатное занятие</h2>
-              <div class="registry__form form">
-                <form action="https://echo.htmlacademy.ru/" method="post">
-                  <label class="form__label field">
-                    <span class="field__label">Имя</span>
-                    <input type="text" name="name" pattern="[a-zA-Zа-яёА-ЯЁ\s]+" placeholder="" required>
-                    <!-- <span class="field__error-message">Текст ошибки</span> -->
-                  </label>
-                  <label class="form__label field">
-                    <span class="field__label">Телефон</span>
-                    <input type="tel" name="tel" pattern="\+?[0-9]{11}" placeholder="" required>
-                    <!-- <span class="field__error-message">Текст ошибки</span> -->
-                  </label>
-                  <button class="form__button button button--secondary" type="submit">Отправить</button>
-                </form>
-              </div>
+        <section class="registry">
+          <div class="registry__wrapper container">
+            <h2 class="registry__title title-middle title-middle--alternative">Бесплатное занятие</h2>
+            <div class="registry__form form">
+              <form action="https://echo.htmlacademy.ru/" method="post">
+                <label class="form__label field">
+                  <span class="field__label">Имя</span>
+                  <input type="text" name="name" pattern="[a-zA-Zа-яёА-ЯЁ\s]+" placeholder="" required>
+                  <!-- <span class="field__error-message">Текст ошибки</span> -->
+                </label>
+                <label class="form__label field">
+                  <span class="field__label">Телефон</span>
+                  <input type="tel" name="tel" pattern="\+?[0-9]{11}" placeholder="" required>
+                  <!-- <span class="field__error-message">Текст ошибки</span> -->
+                </label>
+                <button class="form__button button button--secondary button--alternative" type="submit">Отправить</button>
+              </form>
             </div>
-          </section>
-          <section class="contacts">
-            <div class="contacts__wrapper container">
-              <h2 class="contacts__title title-middle title-middle--alternative">Контакты</h2>
-              <ul class="contacts__list contacts-list">
-                <li class="contacts-list__item contacts-list__item--address">
-                  <h3 class="contacts-list__title">Адрес:</h3>
-                  <address class="contacts-list__content">г. Омск, ул. 60 лет Октября, 7</address>
-                </li>
-                <li class="contacts-list__item contacts-list__item--schedule">
-                  <h3 class="contacts-list__title">График работы:</h3>
-                  <p class="contacts-list__content">Пн-Вс: с
-                    <time datetime="08:00">8:00&nbsp;</time>до
-                    <time datetime="22:00">22:00</time>
-                  </p>
-                </li>
-                <li class="contacts-list__item contacts-list__item--phone">
-                  <h3 class="contacts-list__title">Телефон:</h3>
-                  <a class="contacts-list__content" href="tel:+78005555555">8 800 555-55-55</a>
-                </li>
-                <li class="contacts-list__item contacts-list__item--email">
-                  <h3 class="contacts-list__title">Email:</h3>
-                  <a class="contacts-list__content" href="mailto:oмск@supergym.ru">oмск@supergym.ru</a>
-                </li>
-              </ul>
-            </div>
-          </section>
-        </div>
+          </div>
+        </section>
+        <section class="contacts">
+          <div class="contacts__wrapper container">
+            <h2 class="contacts__title title-middle title-middle--alternative">Контакты</h2>
+            <ul class="contacts__list contacts-list">
+              <li class="contacts-list__item contacts-list__item--address">
+                <h3 class="contacts-list__title">Адрес:</h3>
+                <address class="contacts-list__content">г. Омск, ул. 60 лет Октября, 7</address>
+              </li>
+              <li class="contacts-list__item contacts-list__item--schedule">
+                <h3 class="contacts-list__title">График работы:</h3>
+                <p class="contacts-list__content">Пн-Вс: с
+                  <time datetime="08:00">8:00&nbsp;</time>до
+                  <time datetime="22:00">22:00</time>
+                </p>
+              </li>
+              <li class="contacts-list__item contacts-list__item--phone">
+                <h3 class="contacts-list__title">Телефон:</h3>
+                <a class="contacts-list__content" href="tel:+78005555555">8 800 555-55-55</a>
+              </li>
+              <li class="contacts-list__item contacts-list__item--email">
+                <h3 class="contacts-list__title">Email:</h3>
+                <a class="contacts-list__content" href="mailto:oмск@supergym.ru">oмск@supergym.ru</a>
+              </li>
+            </ul>
+          </div>
+        </section>
       </div>
     </main>
     <footer class="main-footer" data-test="footer">

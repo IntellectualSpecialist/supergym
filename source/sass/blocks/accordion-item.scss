@@ -125,14 +125,14 @@
 .accordion-item__content {
   max-height: 0;
   padding-right: 26px;
+  font-size: 16px;
+  line-height: 20px;
   transition: max-height 0.3s ease-in;
   overflow: hidden;
 
-  p {
+  * {
     margin-top: 8px;
     margin-bottom: 8px;
-    font-size: 16px;
-    line-height: 20px;
   }
 }
 
@@ -187,16 +187,15 @@
     width: 560px;
     margin-top: 0;
     padding-right: 0;
-
-    p {
-      font-size: 18px;
-      line-height: 24px;
-    }
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .accordion-item {
+    padding-bottom: 14px;
+
     &--active {
       .accordion-item__content {
         margin-top: 15px;
@@ -205,7 +204,7 @@
   }
 
   .accordion-item__header {
-    margin-bottom: 7px;
+    margin-bottom: 8px;
 
     h3 {
       width: 660px;

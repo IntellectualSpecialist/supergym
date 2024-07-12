@@ -9,6 +9,7 @@
 }
 
 .main-header__phone {
+  width: 149px;
   margin-top: -1px;
   margin-left: auto;
 }
@@ -18,6 +19,10 @@
     padding-top: 31px;
     padding-bottom: 30px;
   }
+
+  .main-header__phone {
+    width: 162px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -26,6 +31,7 @@
   }
 
   .main-header__phone {
+    width: 176px;
     margin-top: 2px;
     margin-left: auto;
   }

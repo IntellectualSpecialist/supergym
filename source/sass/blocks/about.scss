@@ -19,9 +19,6 @@
   margin-bottom: 35px;
 
   p {
-    margin-top: 8px;
-    margin-bottom: 8px;
-
     &:not(:first-child) {
       display: none;
     }
@@ -103,6 +100,7 @@
 
   .about__wrapper {
     display: flex;
+    align-items: flex-start;
     column-gap: 45px;
   }
 

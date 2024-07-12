@@ -132,5 +132,17 @@
         padding: 25px 27px;
       }
     }
+
+    &--alternative {
+      padding: 26px 27px 24px;
+
+      &:hover {
+        padding: 26px 27px 24px;
+      }
+
+      &:active {
+        padding: 26px 27px 24px;
+      }
+    }
   }
 }

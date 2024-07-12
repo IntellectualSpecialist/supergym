@@ -5,6 +5,26 @@
   text-align: center;
 }
 
+.features-card__stats {
+  margin-bottom: 6px;
+  line-height: 20px;
+  font-weight: 400;
+
+  b {
+    font-size: 64px;
+    line-height: 64px;
+    font-weight: 700;
+    background-image: $alt-secondary-gradient;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  span {
+    display: block;
+    color: $blue-text;
+  }
+}
+
 .features-card__content {
   flex-grow: 1;
   width: 290px;
@@ -22,26 +42,6 @@
   p {
     margin-top: 8px;
     margin-bottom: 8px;
-  }
-}
-
-.features-card__stats {
-  margin-bottom: 6px;
-
-  b {
-    font-size: 64px;
-    line-height: 64px;
-    font-weight: 700;
-    background-image: $alt-secondary-gradient;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  span {
-    display: block;
-    line-height: 20px;
-    font-weight: 400;
-    color: $blue-text;
   }
 }
 
@@ -95,6 +95,8 @@
 
   .features-card__stats {
     margin-bottom: 0;
+    font-size: 14px;
+    line-height: 22px;
 
     b {
       font-size: 70px;
@@ -103,8 +105,6 @@
 
     span {
       display: block;
-      font-size: 14px;
-      line-height: 22px;
     }
   }
 

@@ -27,11 +27,13 @@
   @include list-reset;
 
   flex-shrink: 0;
+  width: 113px;
   line-height: 20px;
   font-weight: 400;
 }
 
 .hero__title-wrapper {
+  width: 156px;
   font-family: $secondary-font;
 }
 
@@ -73,10 +75,15 @@
 
   .hero__info {
     align-self: center;
+    width: 324px;
   }
 
   .hero__text {
-    column-gap: 26px;
+    column-gap: 27px;
+  }
+
+  .hero__title-wrapper {
+    width: 185px;
   }
 
   .hero__city {
@@ -137,7 +144,13 @@
   }
 
   .hero__list {
+    width: 115px;
     margin-bottom: 71px;
+  }
+
+  .hero__title-wrapper {
+    width: 270px;
+    padding-left: 20px;
   }
 
   .hero__city {
