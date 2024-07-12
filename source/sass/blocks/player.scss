@@ -13,6 +13,8 @@
 
   img {
     display: block;
+    width: 3200px;
+    height: 170px;
   }
 
   &::before {
@@ -136,7 +138,25 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .player__placeholder {
+    position: relative;
+
+    img {
+      width: 270px;
+      height: 170px;
+    }
+  }
+}
+
 @media (min-width: $desktop-width) {
+  .player__placeholder {
+    img {
+      width: 360px;
+      height: 230px;
+    }
+  }
+
   .player__button {
     width: 72px;
     height: 72px;

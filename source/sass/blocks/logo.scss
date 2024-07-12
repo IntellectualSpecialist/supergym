@@ -3,7 +3,7 @@
     display: block;
     width: 100px;
     height: 20px;
-    object-fit: fill;
+    object-fit: cover;
 
     @media (min-width: $tablet-width) {
       width: 110px;

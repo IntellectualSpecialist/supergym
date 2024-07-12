@@ -83,6 +83,7 @@
   .features-card__content {
     display: flex;
     column-gap: 15px;
+    row-gap: 15px;
     width: auto;
     padding: 0;
 
@@ -94,6 +95,8 @@
   }
 
   .features-card__stats {
+    overflow-wrap: break-word;
+    max-width: 107px;
     margin-bottom: 0;
     font-size: 14px;
     line-height: 22px;
@@ -105,6 +108,7 @@
 
     span {
       display: block;
+      max-width: 107px;
     }
   }
 
@@ -119,6 +123,7 @@
 
     .features-card__stats {
       margin-bottom: 25px;
+      max-width: none;
     }
 
     h3 {
