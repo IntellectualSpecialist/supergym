@@ -51,6 +51,11 @@
     color: $base-primary;
     text-decoration-color: $tab-state;
     pointer-events: none;
+
+    &:focus {
+      color: $base-primary;
+      text-decoration-color: $tab-state;
+    }
   }
 }
 

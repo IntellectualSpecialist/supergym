@@ -76,8 +76,7 @@
                 <img src="img/gym-mobile@1x.jpg" srcset="img/gym-mobile@2x.jpg 2x" width="320" height="280" alt="Тренажёрный зал.">
               </picture>
             </div>
-            <div class="about__player player">
-              <iframe class="player__video player__video--hidden" width="320" height="170" src="https://www.youtube.com/embed/9TZXsZItgdw?si=zkKdQbTxIbj5Vl1y" loading="lazy" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="about__player player" data-src="https://www.youtube.com/embed/9TZXsZItgdw?si=zkKdQbTxIbj5Vl1y">
               <div class="player__placeholder">
                 <picture>
                   <source width="360" height="230" type="image/webp" media="(min-width: 1366px)" srcset="img/video-gym-desktop@1x.webp, img/video-gym-desktop@2x.webp 2x">
@@ -101,17 +100,17 @@
           <div class="price__tabs price-tabs">
             <ul class="price-tabs__list">
               <li class="price-tabs__item">
-                <button class="price-tabs__button price-tabs__button--active" type="button">1 месяц</button>
+                <button class="price-tabs__button price-tabs__button--active" type="button" data-month-counter="1">1 месяц</button>
               </li>
               <li class="price-tabs__item">
-                <button class="price-tabs__button" type="button">6 месяцев</button>
+                <button class="price-tabs__button" type="button" data-month-counter="6">6 месяцев</button>
               </li>
               <li class="price-tabs__item">
-                <button class="price-tabs__button" type="button">12 месяцев</button>
+                <button class="price-tabs__button" type="button" data-month-counter="12">12 месяцев</button>
               </li>
             </ul>
             <ul class="price-tabs__price-cards">
-              <li class="price-tabs__price-card price-card">
+              <li class="price-tabs__price-card price-card" data-type="withCoach">
                 <h3 class="price-card__title title-small">С тренером</h3>
                 <p class="price-card__description">12 занятий</p>
                 <span class="price-card__price" data-value="5000">
@@ -125,7 +124,7 @@
                 </span>
                 <a class="price-card__button button" href="#">Купить абонемент</a>
               </li>
-              <li class="price-tabs__price-card price-card">
+              <li class="price-tabs__price-card price-card" data-type="day">
                 <h3 class="price-card__title title-small">Дневной</h3>
                 <p class="price-card__description">с 8:00 до 17:00</p>
                 <span class="price-card__price" data-value="1700">
@@ -139,7 +138,7 @@
                 </span>
                 <a class="price-card__button button" href="#">Купить абонемент</a>
               </li>
-              <li class="price-tabs__price-card price-card">
+              <li class="price-tabs__price-card price-card" data-type="fullDay">
                 <h3 class="price-card__title title-small">Полный день</h3>
                 <p class="price-card__description">с 8:00 до 22:00</p>
                 <span class="price-card__price" data-value="2700">
@@ -504,21 +503,21 @@
           <div class="faq__tabs faq-tabs">
             <ul class="faq-tabs__list">
               <li class="faq-tabs__item">
-                <button class="faq-tabs__button faq-tabs__button--active" type="button">Центр</button>
+                <button class="faq-tabs__button faq-tabs__button--active" type="button" data-tab-id="1">Центр</button>
               </li>
               <li class="faq-tabs__item">
-                <button class="faq-tabs__button" type="button">Абонемент</button>
+                <button class="faq-tabs__button" type="button" data-tab-id="2">Абонемент</button>
               </li>
               <li class="faq-tabs__item">
-                <button class="faq-tabs__button" type="button">Услуги</button>
+                <button class="faq-tabs__button" type="button" data-tab-id="3">Услуги</button>
               </li>
               <li class="faq-tabs__item">
-                <button class="faq-tabs__button" type="button">Правила</button>
+                <button class="faq-tabs__button" type="button" data-tab-id="4">Правила</button>
               </li>
             </ul>
             <div class="faq-tabs__content">
-              <ul class="faq-tabs__tab faq-tabs__tab--current accordion">
-                <li class="accordion__item accordion-item accordion-item--active">
+              <ul class="faq-tabs__tab faq-tabs__tab--current accordion" id="1">
+                <li class="accordion__item accordion-item accordion-item--active accordion-item--no-js">
                   <header class="accordion-item__header">
                     <h3>Как стать членом фитнес&#8209;центра?</h3>
                     <button class="accordion-item__button" type="button">
@@ -526,7 +525,9 @@
                     </button>
                   </header>
                   <div class="accordion-item__content">
-                    <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                    <div class="accordion-item__content-wrapper">
+                      <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                    </div>
                   </div>
                 </li>
                 <li class="accordion__item accordion-item">
@@ -537,7 +538,9 @@
                     </button>
                   </header>
                   <div class="accordion-item__content">
-                    <p>Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую неделю.</p>
+                    <div class="accordion-item__content-wrapper">
+                      <p>Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую неделю.</p>
+                    </div>
                   </div>
                 </li>
                 <li class="accordion__item accordion-item">
@@ -548,7 +551,9 @@
                     </button>
                   </header>
                   <div class="accordion-item__content">
-                    <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                    <div class="accordion-item__content-wrapper">
+                      <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                    </div>
                   </div>
                 </li>
                 <li class="accordion__item accordion-item">
@@ -559,11 +564,13 @@
                     </button>
                   </header>
                   <div class="accordion-item__content">
-                    <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                    <div class="accordion-item__content-wrapper">
+                      <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                    </div>
                   </div>
                 </li>
               </ul>
-              <ul class="faq-tabs__tab accordion">
+              <ul class="faq-tabs__tab accordion" id="2">
                 <li class="accordion__item accordion-item accordion-item--active">
                   <header class="accordion-item__header">
                     <h3>Занятия с тренером входят в абонемент?</h3>
@@ -572,7 +579,9 @@
                     </button>
                   </header>
                   <div class="accordion-item__content">
-                    <p>При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,  получить небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                    <div class="accordion-item__content-wrapper">
+                      <p>При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,  получить небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                    </div>
                   </div>
                 </li>
                 <li class="accordion__item accordion-item">
@@ -583,7 +592,9 @@
                     </button>
                   </header>
                   <div class="accordion-item__content">
-                    <p>Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую неделю.</p>
+                    <div class="accordion-item__content-wrapper">
+                      <p>Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую неделю.</p>
+                    </div>
                   </div>
                 </li>
                 <li class="accordion__item accordion-item">
@@ -594,7 +605,9 @@
                     </button>
                   </header>
                   <div class="accordion-item__content">
-                    <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                    <div class="accordion-item__content-wrapper">
+                      <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                    </div>
                   </div>
                 </li>
                 <li class="accordion__item accordion-item">
@@ -605,11 +618,13 @@
                     </button>
                   </header>
                   <div class="accordion-item__content">
-                    <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                    <div class="accordion-item__content-wrapper">
+                      <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                    </div>
                   </div>
                 </li>
               </ul>
-              <ul class="faq-tabs__tab accordion">
+              <ul class="faq-tabs__tab accordion" id="3">
                 <li class="accordion__item accordion-item accordion-item--active">
                   <header class="accordion-item__header">
                     <h3>Предлагает ли клуб услуги по консультированию по вопросам питания?</h3>
@@ -618,7 +633,9 @@
                     </button>
                   </header>
                   <div class="accordion-item__content">
-                    <p>Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.</p>
+                    <div class="accordion-item__content-wrapper">
+                      <p>Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.</p>
+                    </div>
                   </div>
                 </li>
                 <li class="accordion__item accordion-item">
@@ -629,7 +646,9 @@
                     </button>
                   </header>
                   <div class="accordion-item__content">
-                    <p>Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую неделю.</p>
+                    <div class="accordion-item__content-wrapper">
+                      <p>Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую неделю.</p>
+                    </div>
                   </div>
                 </li>
                 <li class="accordion__item accordion-item">
@@ -640,7 +659,9 @@
                     </button>
                   </header>
                   <div class="accordion-item__content">
-                    <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                    <div class="accordion-item__content-wrapper">
+                      <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                    </div>
                   </div>
                 </li>
                 <li class="accordion__item accordion-item">
@@ -651,20 +672,24 @@
                     </button>
                   </header>
                   <div class="accordion-item__content">
-                    <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                    <div class="accordion-item__content-wrapper">
+                      <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                    </div>
                   </div>
                 </li>
               </ul>
-              <ul class="faq-tabs__tab accordion">
+              <ul class="faq-tabs__tab accordion" id="4">
                 <li class="accordion__item accordion-item accordion-item--active">
                   <header class="accordion-item__header">
-                    <h3>Есть в фитнес-центре дресс-код?</h3>
+                    <h3>Есть в фитнес-центре дресс&#8209;код?</h3>
                     <button class="accordion-item__button" type="button">
                       <span class="visually-hidden">Показать ответ</span>
                     </button>
                   </header>
                   <div class="accordion-item__content">
-                    <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).</p>
+                    <div class="accordion-item__content-wrapper">
+                      <p>Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).</p>
+                    </div>
                   </div>
                 </li>
                 <li class="accordion__item accordion-item">
@@ -675,7 +700,9 @@
                     </button>
                   </header>
                   <div class="accordion-item__content">
-                    <p>Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую неделю.</p>
+                    <div class="accordion-item__content-wrapper">
+                      <p>Вы можете ознакомиться с расписание на стойке информации, на нашем официальном сайте. Так же есть возможность оформить подписку на наши новости и получать расписание и обновления на почту каждую неделю.</p>
+                    </div>
                   </div>
                 </li>
                 <li class="accordion__item accordion-item">
@@ -686,7 +713,9 @@
                     </button>
                   </header>
                   <div class="accordion-item__content">
-                    <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                    <div class="accordion-item__content-wrapper">
+                      <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                    </div>
                   </div>
                 </li>
                 <li class="accordion__item accordion-item">
@@ -697,7 +726,9 @@
                     </button>
                   </header>
                   <div class="accordion-item__content">
-                    <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                    <div class="accordion-item__content-wrapper">
+                      <p>При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придёт вам на почту.</p>
+                    </div>
                   </div>
                 </li>
               </ul>
@@ -762,12 +793,14 @@
               <form action="https://echo.htmlacademy.ru/" method="post">
                 <label class="form__label field">
                   <span class="field__label">Имя</span>
-                  <input type="text" name="name" pattern="[a-zA-Zа-яёА-ЯЁ\s]+" placeholder="" required>
+                  <input type="text" name="name" id="name" type="text" required>
+                  <!-- pattern="[a-zA-Zа-яёА-ЯЁ\s]+" -->
                   <!-- <span class="field__error-message">Текст ошибки</span> -->
                 </label>
                 <label class="form__label field">
                   <span class="field__label">Телефон</span>
-                  <input type="tel" name="tel" pattern="\+?[0-9]{11}" placeholder="" required>
+                  <input type="tel" name="tel" id="tel" type="text" required>
+                  <!-- pattern="\+?[0-9]{11}" -->
                   <!-- <span class="field__error-message">Текст ошибки</span> -->
                 </label>
                 <button class="form__button button button--secondary button--alternative" type="submit">Отправить</button>
@@ -855,7 +888,7 @@
         </ul>
       </div>
     </footer>
-    <script src="js/vendor/swiper-bundle.min.js" defer></script>
+    <script src="js/vendor/swiper-bundle-min.js" defer></script>
     <script type="module" src="js/main.js"></script>
   </body>
 

@@ -28,6 +28,11 @@
   &:focus {
     border-color: $base-primary;
     background-color: $base-white;
+
+    &:hover {
+      border-color: $base-primary;
+      background-color: $base-white;
+    }
   }
 
   &:active {
@@ -125,9 +130,17 @@
     padding-top: 18px;
     padding-bottom: 16px;
 
-    &--active {
-      padding-top: 19px;
-      padding-bottom: 17px;
+    &:active {
+      padding: 18px 16px;
     }
+
+    &--active {
+      padding: 18px 16px;
+    }
+
+    // &--active {
+    //   padding-top: 19px;
+    //   padding-bottom: 17px;
+    // }
   }
 }

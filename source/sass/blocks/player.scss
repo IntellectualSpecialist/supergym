@@ -1,8 +1,15 @@
 .player {
   position: relative;
+  width: 320px;
+  height: 170px;
+  background-color: $base-primary;
 }
 
 .player__video {
+  width: 320px;
+  height: 170px;
+  border: none;
+
   &--hidden {
     display: none;
   }
@@ -13,7 +20,7 @@
 
   img {
     display: block;
-    width: 3200px;
+    width: 320px;
     height: 170px;
   }
 
@@ -139,6 +146,16 @@
 }
 
 @media (min-width: $tablet-width) {
+  .player {
+    width: 270px;
+    height: 170px;
+  }
+
+  .player__video {
+    width: 270px;
+    height: 170px;
+  }
+
   .player__placeholder {
     position: relative;
 
@@ -150,6 +167,16 @@
 }
 
 @media (min-width: $desktop-width) {
+  .player {
+    width: 360px;
+    height: 230px;
+  }
+
+  .player__video {
+    width: 360px;
+    height: 230px;
+  }
+
   .player__placeholder {
     img {
       width: 360px;

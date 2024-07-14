@@ -16,4 +16,10 @@ const swiperReviews = new Swiper('.slider--reviews .slider__swiper', {
   },
 });
 
-swiperReviews.init();
+const initReviewsSlider = () => {
+  if (document.querySelector('.slider--reviews')) {
+    swiperReviews.init();
+  }
+};
+
+export { initReviewsSlider };

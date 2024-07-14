@@ -28,4 +28,10 @@ const swiperJuri = new Swiper('.slider--juri .slider__swiper', {
   }
 });
 
-swiperJuri.init();
+const initJuriSlider = () => {
+  if (document.querySelector('.slider--juri')) {
+    swiperJuri.init();
+  }
+};
+
+export { initJuriSlider };

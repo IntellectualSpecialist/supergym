@@ -1,6 +1,12 @@
 .accordion-item {
   padding-top: 20px;
-  padding-bottom: 12px;
+  padding-bottom: 20px;
+}
+
+.accordion-item--no-js {
+  .accordion-item__content {
+    height: auto;
+  }
 }
 
 .accordion-item__header {
@@ -8,7 +14,6 @@
   column-gap: 22px;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 8px;
 
   h3 {
     margin: 0;
@@ -123,48 +128,32 @@
 }
 
 .accordion-item__content {
-  max-height: 0;
+  height: 0;
   padding-right: 26px;
   font-size: 16px;
   line-height: 20px;
-  transition: max-height 0.3s ease-in;
   overflow: hidden;
 
-  * {
-    margin-top: 8px;
-    margin-bottom: 8px;
+  &--animation {
+    transition: height 0.2s ease-in;
   }
 }
 
-.accordion-item--active {
-  .accordion-item__content {
-    max-height: 300px;
-    margin-top: 12px;
-    overflow: scroll;
-    scrollbar-width: none;
+.accordion-item__content-wrapper {
+  padding-top: 20px;
+
+  p {
+    margin: 0;
   }
 }
-
 
 @media (min-width: $tablet-width) {
   .accordion-item {
     padding-top: 23px;
-    padding-bottom: 15px;
-
-    &--active {
-      .accordion-item__content {
-        margin-top: 0;
-      }
-
-      .accordion-item__header {
-        margin-bottom: 2px;
-      }
-    }
+    padding-bottom: 23px;
   }
 
   .accordion-item__header {
-    margin-bottom: 8px;
-
     h3 {
       width: 500px;
       font-size: 22px;
@@ -185,27 +174,22 @@
 
   .accordion-item__content {
     width: 560px;
-    margin-top: 0;
     padding-right: 0;
     font-size: 18px;
     line-height: 24px;
+  }
+
+  .accordion-item__content-wrapper {
+    padding-top: 10px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .accordion-item {
-    padding-bottom: 14px;
-
-    &--active {
-      .accordion-item__content {
-        margin-top: 15px;
-      }
-    }
+    padding-bottom: 22px;
   }
 
   .accordion-item__header {
-    margin-bottom: 8px;
-
     h3 {
       width: 660px;
       font-size: 24px;
@@ -215,5 +199,9 @@
 
   .accordion-item__content {
     width: 660px;
+  }
+
+  .accordion-item__content-wrapper {
+    padding-top: 23px;
   }
 }
