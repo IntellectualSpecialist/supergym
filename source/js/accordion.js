@@ -5,22 +5,24 @@ const removeNoJsClass = () => {
   activeItemElement.classList.remove('accordion-item--no-js');
 };
 
+const onAccordionClick = (evt) => {
+  if (evt.target.matches('.accordion-item__button')) {
+    const accordionItemElement = evt.target.closest('.accordion-item');
+    accordionItemElement.querySelector('.accordion-item__content').classList.add('accordion-item__content--animation');
+    accordionItemElement.classList.toggle('accordion-item--active');
+
+    if (!accordionItemElement.classList.contains('accordion-item--active')) {
+      accordionItemElement.querySelector('.accordion-item__content').style.height = 0;
+    } else {
+      const contentHeight = accordionItemElement.querySelector('.accordion-item__content-wrapper').offsetHeight;
+      accordionItemElement.querySelector('.accordion-item__content').style.height = `${contentHeight}px`;
+    }
+  }
+};
+
 const registerAccordionEvents = () => {
   accordionElements.forEach((accordion) => {
-    accordion.addEventListener('click', (evt) => {
-      if (evt.target.matches('.accordion-item__button')) {
-        const accordionItemElement = evt.target.closest('.accordion-item');
-        accordionItemElement.querySelector('.accordion-item__content').classList.add('accordion-item__content--animation');
-        accordionItemElement.classList.toggle('accordion-item--active');
-
-        if (!accordionItemElement.classList.contains('accordion-item--active')) {
-          accordionItemElement.querySelector('.accordion-item__content').style.height = 0;
-        } else {
-          const contentHeight = accordionItemElement.querySelector('.accordion-item__content-wrapper').offsetHeight;
-          accordionItemElement.querySelector('.accordion-item__content').style.height = `${contentHeight}px`;
-        }
-      }
-    });
+    accordion.addEventListener('click', onAccordionClick);
   });
 };
 

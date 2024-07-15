@@ -28,13 +28,15 @@ const updateTab = () => {
   initActiveAccordionItemHeight();
 };
 
+const onTabButtonClick = (evt) => {
+  if (evt.target.matches('.faq-tabs__button')) {
+    currentTab = Number(evt.target.dataset.tabId);
+    updateTab();
+  }
+};
+
 const registerTabButtonEvents = () => {
-  tabButtonsListElement.addEventListener('click', (evt) => {
-    if (evt.target.matches('.faq-tabs__button')) {
-      currentTab = Number(evt.target.dataset.tabId);
-      updateTab();
-    }
-  });
+  tabButtonsListElement.addEventListener('click', onTabButtonClick);
 };
 
 const initFaqTabs = () => {

@@ -104,3 +104,10 @@
   overflow: scroll;
   scrollbar-width: none;
 }
+
+@media (min-width: $tablet-width) {
+  .field__label {
+    top: 11px;
+    font-weight: 400;
+  }
+}

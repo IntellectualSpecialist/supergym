@@ -89,12 +89,24 @@
   &:disabled {
     opacity: 0.3;
     pointer-events: none;
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      background-color: $bg-dark-blue;
+    }
   }
 }
 
 .accordion-item__button--disabled {
   opacity: 0.3;
   pointer-events: none;
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    background-color: $bg-dark-blue;
+  }
 
   &:focus {
     background-color: transparent;
@@ -123,7 +135,7 @@
   }
 
   &:focus {
-    background-color: $bg-dark-blue;
+    background-color: $divider;
   }
 }
 
