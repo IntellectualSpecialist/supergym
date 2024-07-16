@@ -33,11 +33,15 @@
   }
 
   &:disabled {
+    color: rgba($base-primary, 0.3);
+    letter-spacing: 0.05em;
     opacity: 0.3;
     pointer-events: none;
   }
 
   &--disabled {
+    color: rgba($base-primary, 0.3);
+    letter-spacing: 0.05em;
     opacity: 0.3;
     pointer-events: none;
   }
@@ -59,6 +63,7 @@
       color: $base-secondary;
       background-color: rgba(255, 255, 255, 0.8);
       background-image: none;
+      border-color: #000000;
     }
 
     &:active {
@@ -70,12 +75,14 @@
     }
 
     &:disabled {
+      color: rgba($base-white, 0.3);
       opacity: 0.5;
       pointer-events: none;
     }
   }
 
   &--secondary-disabled {
+    color: rgba($base-white, 0.3);
     opacity: 0.5;
     pointer-events: none;
   }
@@ -130,18 +137,6 @@
 
       &:active {
         padding: 25px 27px;
-      }
-    }
-
-    &--alternative {
-      padding: 27px 27px 23px;
-
-      &:hover {
-        padding: 27px 27px 23px;
-      }
-
-      &:active {
-        padding: 27px 27px 23px;
       }
     }
   }

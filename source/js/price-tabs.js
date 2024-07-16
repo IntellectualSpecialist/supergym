@@ -23,7 +23,7 @@ const updatePriceTabs = () => {
     const priceWrapper = card.querySelector('.price-card__price');
     const priceValue = priceWrapper.querySelector('.price-card__value');
     const currentTab = tabButtonsElements[tabIndex];
-    const currentMonthCount = Number(currentTab.dataset.monthCounter);
+    const currentMonthCount = Number(currentTab.dataset.monthCount);
     const currentPrice = pricePerMonth[priceCardType] * currentMonthCount;
     priceWrapper.dataset.value = currentPrice;
     priceValue.textContent = currentPrice;

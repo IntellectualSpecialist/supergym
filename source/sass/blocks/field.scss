@@ -66,6 +66,10 @@
     color: $base-white;
     opacity: 0.7;
   }
+
+  input:disabled::placeholder {
+    opacity: 0.4;
+  }
 }
 
 .field--invalid {

@@ -125,22 +125,4 @@
   .faq-tabs__content {
     width: 860px;
   }
-
-  .faq-tabs__button {
-    padding-top: 18px;
-    padding-bottom: 16px;
-
-    &:active {
-      padding: 18px 16px;
-    }
-
-    &--active {
-      padding: 18px 16px;
-    }
-
-    // &--active {
-    //   padding-top: 19px;
-    //   padding-bottom: 17px;
-    // }
-  }
 }

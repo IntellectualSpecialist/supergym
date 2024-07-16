@@ -4,9 +4,14 @@
   font-size: 32px;
   line-height: 32px;
   font-weight: 600;
+  color: $base-primary;
 
   &--center {
     text-align: center;
+  }
+
+  &--light {
+    color: $base-white;
   }
 
   @media (min-width: $tablet-width) {

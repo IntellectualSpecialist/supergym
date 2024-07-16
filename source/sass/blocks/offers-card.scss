@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     padding: 21px;
-    padding-bottom: 16px;
+    padding-bottom: 15px;
     color: $bg-dark-blue;
     border-width: 7px;
     border-style: solid;
@@ -48,8 +48,8 @@
 .offers-card__more-button {
   display: block;
   width: fit-content;
-  margin: 3px auto 0;
-  padding: 8px;
+  margin: 2px auto 0;
+  padding: 9px;
   font-size: 14px;
   line-height: 14px;
   font-weight: 700;
@@ -103,7 +103,7 @@
   .offers-card__content {
     width: 260px;
     margin: 0 auto;
-    padding: 31px 0 26px;
+    padding: 31px 0 25px;
   }
 
   h3 {
@@ -112,7 +112,7 @@
 
   h3 * {
     display: block;
-    margin-top: 9px;
+    margin-top: 8px;
     font-size: 64px;
     line-height: 64px;
     font-weight: 700;
@@ -129,8 +129,10 @@
   }
 
   .offers-card__more-button--disabled {
+    opacity: 0.5;
+
     &:focus {
-      opacity: 0.3;
+      opacity: 0.5;
       text-decoration-color: $base-white;
       border-color: transparent;
     }
@@ -157,8 +159,8 @@
   }
 
   .offers-card__more-button {
-    margin-top: 14px;
-    margin-left: -9px;
+    margin-top: 13px;
+    margin-left: -8px;
     margin-right: 0;
   }
 
@@ -190,7 +192,7 @@
 @media (min-width: $desktop-width) {
   .offers-card {
     &:not(.offers-card--dark) {
-      padding: 20px 20px 17px;
+      padding: 21px 20px 17px;
     }
 
     &--dark {
@@ -209,6 +211,7 @@
   }
 
   .offers-card__more-button {
-    margin-top: 23px;
+    margin-left: -10px;
+    margin-top: 20px;
   }
 }
