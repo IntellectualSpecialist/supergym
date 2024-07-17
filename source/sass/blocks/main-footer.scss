@@ -22,6 +22,7 @@
 
   .main-footer__wrapper {
     display: flex;
+    align-items: flex-start;
   }
 
   .main-footer__logo {
@@ -38,6 +39,7 @@
   .main-footer__social {
     width: 105px;
     margin-left: auto;
+    margin-top: 3px;
   }
 }
 

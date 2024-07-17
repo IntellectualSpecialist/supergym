@@ -5,9 +5,15 @@ const pricePerMonth = {
 };
 let tabIndex = 0;
 const priceTabsElement = document.querySelector('.price-tabs');
-const tabButtonsListElement = priceTabsElement.querySelector('.price-tabs__list');
-const tabButtonsElements = tabButtonsListElement.querySelectorAll('.price-tabs__button');
-const priceCardsElements = priceTabsElement.querySelectorAll('.price-card');
+let tabButtonsListElement;
+let tabButtonsElements;
+let priceCardsElements;
+
+if (priceTabsElement) {
+  tabButtonsListElement = priceTabsElement.querySelector('.price-tabs__list');
+  tabButtonsElements = tabButtonsListElement.querySelectorAll('.price-tabs__button');
+  priceCardsElements = priceTabsElement.querySelectorAll('.price-card');
+}
 
 const updateTabButtons = () => {
   tabButtonsElements.forEach((tab) => {

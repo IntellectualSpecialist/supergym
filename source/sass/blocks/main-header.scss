@@ -21,7 +21,8 @@
   }
 
   .main-header__phone {
-    width: 162px;
+    max-width: 331px;
+    width: auto;
   }
 }
 
@@ -31,7 +32,7 @@
   }
 
   .main-header__phone {
-    width: 176px;
+    max-width: 360px;
     margin-top: 2px;
     margin-left: auto;
   }

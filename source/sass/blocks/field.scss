@@ -10,12 +10,6 @@
     }
   }
 
-  &:has(input:focus) {
-    .field__label {
-      display: none;
-    }
-  }
-
   input {
     display: block;
     width: 100%;

@@ -27,7 +27,7 @@ const registerAccordionEvents = () => {
 };
 
 const initAccordion = () => {
-  if (accordionElements) {
+  if (accordionElements.length >= 1) {
     removeNoJsClass();
     registerAccordionEvents();
   }

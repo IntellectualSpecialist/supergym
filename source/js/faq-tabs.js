@@ -2,9 +2,15 @@ import { initActiveAccordionItemHeight } from './accordion';
 
 let currentTab = 1;
 const faqTabsElement = document.querySelector('.faq-tabs');
-const tabButtonsListElement = faqTabsElement.querySelector('.faq-tabs__list');
-const tabButtonsElements = tabButtonsListElement.querySelectorAll('.faq-tabs__button');
-const tabsElements = faqTabsElement.querySelectorAll('.faq-tabs__tab');
+let tabButtonsListElement;
+let tabButtonsElements;
+let tabsElements;
+
+if (faqTabsElement) {
+  tabButtonsListElement = faqTabsElement.querySelector('.faq-tabs__list');
+  tabButtonsElements = tabButtonsListElement.querySelectorAll('.faq-tabs__button');
+  tabsElements = faqTabsElement.querySelectorAll('.faq-tabs__tab');
+}
 
 const updateActiveButton = () => {
   tabButtonsElements.forEach((tab) => {

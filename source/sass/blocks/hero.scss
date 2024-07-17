@@ -30,11 +30,13 @@
   width: 113px;
   line-height: 20px;
   font-weight: 400;
+  overflow-wrap: break-word;
 }
 
 .hero__title-wrapper {
   width: 156px;
   font-family: $secondary-font;
+  overflow-wrap: break-word;
 }
 
 .hero__city {
@@ -83,7 +85,7 @@
   }
 
   .hero__title-wrapper {
-    width: 185px;
+    width: 187px;
   }
 
   .hero__city {
@@ -136,15 +138,17 @@
   }
 
   .hero__info {
-    width: 385px;
+    width: auto;
   }
 
   .hero__text {
     column-gap: 0;
+    justify-content: flex-end;
   }
 
   .hero__list {
-    width: 115px;
+    width: auto;
+    max-width: 260px;
     margin-bottom: 71px;
   }
 

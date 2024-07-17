@@ -1,4 +1,4 @@
-import './vendor/swiper-bundle-min';
+import './vendor/swiper-bundle.min';
 import Swiper from 'swiper';
 import {Navigation} from 'swiper/modules';
 import 'swiper/css';
@@ -18,7 +18,9 @@ const swiperReviews = new Swiper('.slider--reviews .slider__swiper', {
 });
 
 const initReviewsSlider = () => {
-  if (document.querySelector('.slider--reviews')) {
+  const reviewsSliderElement = document.querySelector('.slider--reviews');
+
+  if (reviewsSliderElement) {
     swiperReviews.init();
   }
 };

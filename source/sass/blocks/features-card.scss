@@ -17,6 +17,7 @@
     background-image: $alt-secondary-gradient;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    overflow-wrap: break-word;
   }
 
   span {

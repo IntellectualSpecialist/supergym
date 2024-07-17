@@ -1,13 +1,22 @@
 const alertMessages = {
   empty: 'Заполните поле',
-  name: 'Только буквы',
+  name: 'Укажите только буквы',
   phone: 'Только цифры: +7XXXXXXXXXXX'
 };
 const formElement = document.querySelector('.form form');
-const nameInputElement = formElement.querySelector('#name');
-const phoneInputElement = formElement.querySelector('#tel');
-const nameFieldElement = nameInputElement.closest('.field');
-const phoneFieldElement = phoneInputElement.closest('.field');
+let nameInputElement;
+let phoneInputElement;
+let nameFieldElement;
+let phoneFieldElement;
+let inputsElements;
+
+if (formElement) {
+  nameInputElement = formElement.querySelector('#name');
+  phoneInputElement = formElement.querySelector('#tel');
+  nameFieldElement = nameInputElement.closest('.field');
+  phoneFieldElement = phoneInputElement.closest('.field');
+  inputsElements = formElement.querySelectorAll('input');
+}
 
 const createAlert = (message) => {
   const alertElement = document.createElement('span');
@@ -77,64 +86,26 @@ const onFormSubmit = (evt) => {
   formElement.submit();
 };
 
-const onInputChange = (evt) => {
-  const currentFieldElement = evt.target.closest('.field');
-  if (!evt.target.value) {
-    currentFieldElement.querySelector('.field__label').style.display = 'block';
-  } else {
-    currentFieldElement.querySelector('.field__label').style.display = 'none';
-  }
-};
-
 const onFieldInput = (evt) => {
   const currentFieldElement = evt.target.closest('.field');
-  currentFieldElement.classList.remove('field--invalid');
   const currentErrorElement = currentFieldElement.querySelector('.field__error-message');
+
+  currentFieldElement.classList.remove('field--invalid');
   if (currentErrorElement) {
     currentFieldElement.querySelector('.field__error-message').remove();
-  }
-  currentFieldElement.querySelector('.field__label').style.display = 'none';
-};
-
-const onFieldFocus = (evt) => {
-  const currentFieldElement = evt.target.closest('.field');
-  currentFieldElement.querySelector('.field__label').style.display = 'none';
-};
-
-const onFieldBlur = (evt) => {
-  const currentFieldElement = evt.target.closest('.field');
-  if (!evt.target.value) {
-    currentFieldElement.querySelector('.field__label').style.display = 'block';
-  } else {
-    currentFieldElement.querySelector('.field__label').style.display = 'none';
   }
 };
 
 const registerFormEvents = () => {
-  nameInputElement.addEventListener('input', onFieldInput);
-  phoneInputElement.addEventListener('input', onFieldInput);
-  nameInputElement.addEventListener('focus', onFieldFocus);
-  phoneInputElement.addEventListener('focus', onFieldFocus);
-  nameInputElement.addEventListener('blur', onFieldBlur);
-  phoneInputElement.addEventListener('blur', onFieldBlur);
-  nameInputElement.addEventListener('change', onInputChange);
-  phoneInputElement.addEventListener('change', onInputChange);
+  inputsElements.forEach((input) => {
+    input.addEventListener('input', onFieldInput);
+  });
 
   formElement.addEventListener('submit', onFormSubmit);
 };
 
-const showLabels = () => {
-  if (!nameInputElement.value && !phoneInputElement.value) {
-    const labelsElements = formElement.querySelectorAll('.field__label');
-    labelsElements.forEach((label) => {
-      label.style.display = 'block';
-    });
-  }
-};
-
 const initFormValidate = () => {
   if (formElement) {
-    showLabels();
     registerFormEvents();
   }
 };

@@ -1,4 +1,4 @@
-import './vendor/swiper-bundle-min';
+import './vendor/swiper-bundle.min';
 import Swiper from 'swiper';
 import {Navigation} from 'swiper/modules';
 import 'swiper/css';
@@ -30,9 +30,12 @@ const swiperJuri = new Swiper('.slider--juri .slider__swiper', {
 });
 
 const initJuriSlider = () => {
-  if (document.querySelector('.slider--juri')) {
+  const juriSliderElement = document.querySelector('.slider--juri');
+
+  if (juriSliderElement) {
     swiperJuri.init();
   }
 };
+
 
 export { initJuriSlider };
