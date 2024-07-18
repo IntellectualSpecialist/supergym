@@ -145,6 +145,26 @@
   }
 }
 
+.player__button--disabled {
+  background-color: $base-white;
+  background-image: none;
+  opacity: 0.4;
+  pointer-events: none;
+
+  &::before {
+    border-color: $base-primary;
+    opacity: 1;
+  }
+
+  &::after {
+    background-color: $base-primary;
+  }
+
+  &:focus {
+    background-color: $base-white;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .player {
     width: 270px;

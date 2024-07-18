@@ -1,0 +1,18 @@
+.competitions-about {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .competitions-about {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .competitions-about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}

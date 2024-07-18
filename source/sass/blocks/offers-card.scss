@@ -33,8 +33,7 @@
   flex-grow: 1;
 
   * {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin: 0;
   }
 
   h3 {
@@ -48,7 +47,7 @@
 .offers-card__more-button {
   display: block;
   width: fit-content;
-  margin: 2px auto 0;
+  margin: 10px auto 0;
   padding: 9px;
   font-size: 14px;
   line-height: 14px;
@@ -103,7 +102,7 @@
   .offers-card__content {
     width: 260px;
     margin: 0 auto;
-    padding: 31px 0 25px;
+    padding: 30px 0 25px;
   }
 
   h3 {
@@ -120,7 +119,7 @@
   }
 
   .offers-card__more-button {
-    margin-top: 11px;
+    margin-top: 20px;
     text-decoration-color: $base-white;
 
     &:focus {
@@ -160,8 +159,8 @@
   }
 
   .offers-card__more-button {
-    margin-top: 13px;
-    margin-left: -8px;
+    margin-top: 20px;
+    margin-left: -9px;
     margin-right: 0;
   }
 
@@ -193,7 +192,7 @@
 @media (min-width: $desktop-width) {
   .offers-card {
     &:not(.offers-card--dark) {
-      padding: 21px 20px 17px;
+      padding: 20px 20px 16px;
     }
 
     &--dark {
@@ -213,6 +212,6 @@
 
   .offers-card__more-button {
     margin-left: -10px;
-    margin-top: 20px;
+    margin-top: 30px;
   }
 }

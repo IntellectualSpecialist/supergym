@@ -45,7 +45,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 60px;
-    row-gap: 13px;
+    row-gap: 15px;
 
     &::before {
       content: "";

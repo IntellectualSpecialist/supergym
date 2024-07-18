@@ -25,7 +25,8 @@ const createIframe = () => {
   iframe.setAttribute('allowfullscreen', '');
 };
 
-const onPlayerButtonClick = () => {
+const onPlayerButtonClick = (evt) => {
+  evt.preventDefault();
   createIframe();
   videoPlaceholderElement.remove();
   playerButtonElement.remove();

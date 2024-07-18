@@ -19,6 +19,7 @@
   }
 
   &--custom {
+    min-width: 320px;
     margin-bottom: 40px;
 
     @media (max-width: $mobile-width-only) {

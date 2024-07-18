@@ -22,6 +22,7 @@ const swiperJuri = new Swiper('.slider--juri .slider__swiper', {
       slidesPerGroup: 2
     },
     1366: {
+      allowTouchMove: false,
       slidesPerView: 4,
       spaceBetween: 40,
       slidesPerGroup: 4
@@ -36,6 +37,5 @@ const initJuriSlider = () => {
     swiperJuri.init();
   }
 };
-
 
 export { initJuriSlider };

@@ -15,6 +15,11 @@ const swiperReviews = new Swiper('.slider--reviews .slider__swiper', {
     nextEl: '.slider--reviews .swiper-button-next',
     prevEl: '.slider--reviews .swiper-button-prev',
   },
+  breakpoints: {
+    1366: {
+      allowTouchMove: false
+    }
+  }
 });
 
 const initReviewsSlider = () => {

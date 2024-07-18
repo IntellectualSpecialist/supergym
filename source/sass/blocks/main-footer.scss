@@ -16,8 +16,8 @@
 
 @media (min-width: $tablet-width) {
   .main-footer {
-    padding-top: 41px;
-    padding-bottom: 42px;
+    padding-top: 45px;
+    padding-bottom: 41px;
   }
 
   .main-footer__wrapper {
@@ -26,27 +26,25 @@
   }
 
   .main-footer__logo {
-    margin-top: 3px;
     margin-bottom: 0;
     margin-right: auto;
   }
 
   .main-footer__nav {
     max-width: 430px;
-    margin: 0 auto;
+    margin: -3px auto 0;
   }
 
   .main-footer__social {
     width: 105px;
     margin-left: auto;
-    margin-top: 3px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .main-footer {
-    padding-top: 36px;
-    padding-bottom: 38px;
+    padding-top: 40px;
+    padding-bottom: 37px;
   }
 
   .main-footer__wrapper {
@@ -57,7 +55,6 @@
     width: 130px;
     height: 26px;
     margin-right: auto;
-    margin-top: 4px;
   }
 
   .main-footer__nav {
@@ -66,7 +63,6 @@
 
   .main-footer__social {
     width: auto;
-    margin-top: 4px;
     max-width: 140px;
   }
 }

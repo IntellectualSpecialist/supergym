@@ -6,7 +6,7 @@
 }
 
 .features-card__stats {
-  margin-bottom: 6px;
+  margin-bottom: 12px;
   line-height: 20px;
   font-weight: 400;
 
@@ -33,7 +33,7 @@
   padding: 0 18px;
 
   h3 {
-    margin-top: 12px;
+    margin-top: 0;
     margin-bottom: 12px;
     font-size: 18px;
     line-height: 20px;
@@ -41,20 +41,23 @@
   }
 
   p {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin: 0;
   }
 }
 
 .features-card--dark {
   padding-top: 30px;
-  padding-bottom: 31px;
+  padding-bottom: 40px;
   color: $base-white;
   background-color: $bg-dark-blue;
 
   .features-card__content {
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  .features-card__stats {
+    margin-bottom: 6px;
   }
 
   b {
@@ -67,7 +70,6 @@
   }
 
   h3 {
-    margin-top: 5px;
     margin-bottom: 20px;
     font-size: 22px;
     line-height: 22px;
@@ -85,11 +87,11 @@
     display: flex;
     column-gap: 15px;
     row-gap: 15px;
+    align-items: flex-start;
     width: auto;
     padding: 0;
 
     h3 {
-      margin-top: 0;
       font-size: 20px;
       line-height: 20px;
     }
@@ -115,7 +117,7 @@
 
   .features-card--dark {
     padding: 35px;
-    padding-bottom: 27px;
+    padding-bottom: 35px;
 
     .features-card__content {
       display: block;
@@ -128,7 +130,6 @@
     }
 
     h3 {
-      margin-top: 25px;
       margin-bottom: 25px;
       font-size: 24px;
       line-height: 24px;
