@@ -3,13 +3,6 @@
   display: block;
   padding-bottom: 24px;
 
-  &:has(input:focus),
-  &:has(input:valid) {
-    .field__label {
-      display: none;
-    }
-  }
-
   input {
     display: block;
     width: 100%;
@@ -23,13 +16,24 @@
     border-bottom-color: $divider;
     background-color: transparent;
 
+    &:placeholder-shown {
+      padding-left: 0;
+      padding-bottom: 0;
+    }
+
     &:hover {
       border-bottom-color: $base-white;
     }
 
     &:focus {
+      padding-left: 4px;
+      padding-bottom: 4px;
       border: 1px solid $base-white;
       outline: none;
+    }
+
+    &:focus::placeholder {
+      opacity: 0;
     }
 
     &:disabled {
@@ -57,11 +61,10 @@
   }
 
   input::placeholder {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
     color: $base-white;
-    opacity: 0.7;
-  }
-
-  input:disabled::placeholder {
     opacity: 0.4;
   }
 }
@@ -104,8 +107,11 @@
 }
 
 @media (min-width: $tablet-width) {
-  .field__label {
-    top: 11px;
-    font-weight: 400;
+  .field {
+    input {
+      &::placeholder {
+        font-weight: 400;
+      }
+    }
   }
 }

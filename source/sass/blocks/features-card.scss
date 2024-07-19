@@ -138,6 +138,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .features-card {
+    padding-bottom: 8px;
+  }
+
   .features-card__content {
     column-gap: 43px;
     width: 100%;
@@ -155,7 +159,7 @@
   }
 
   .features-card--dark {
-    padding: 58px 40px 38px;
+    padding: 58px 40px;
 
     .features-card__content {
       width: auto;

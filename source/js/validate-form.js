@@ -1,7 +1,8 @@
 const alertMessages = {
   empty: 'Заполните поле',
-  name: 'Укажите только буквы',
-  phone: 'Только цифры: +7XXXXXXXXXXX'
+  name: 'Только буквы и пробелы',
+  phone: 'Только цифры: +7XXXXXXXXXXX',
+  lessLetters: 'Укажите минимум 2 буквы'
 };
 const formElement = document.querySelector('.form form');
 let nameInputElement;
@@ -27,6 +28,11 @@ const createAlert = (message) => {
 
 function isValidName(name) {
   const pattern = /^[a-zA-Zа-яёА-ЯЁ\s]+$/;
+  return pattern.test(name);
+}
+
+function isNameСontainsTwoLetters(name) {
+  const pattern = /[a-zA-Zа-яёА-ЯЁ]{2,}/;
   return pattern.test(name);
 }
 
@@ -69,6 +75,14 @@ const onFormSubmit = (evt) => {
 
   if (!isValidName(name)) {
     const alertMessage = createAlert(alertMessages.name);
+    nameFieldElement.classList.add('field--invalid');
+    nameFieldElement.appendChild(alertMessage);
+
+    return;
+  }
+
+  if (!isNameСontainsTwoLetters(name)) {
+    const alertMessage = createAlert(alertMessages.lessLetters);
     nameFieldElement.classList.add('field--invalid');
     nameFieldElement.appendChild(alertMessage);
 
