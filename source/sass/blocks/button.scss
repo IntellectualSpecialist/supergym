@@ -34,14 +34,12 @@
 
   &:disabled {
     color: rgba($base-primary, 0.3);
-    letter-spacing: 0.05em;
     opacity: 0.3;
     pointer-events: none;
   }
 
   &--disabled {
     color: rgba($base-primary, 0.3);
-    letter-spacing: 0.05em;
     opacity: 0.3;
     pointer-events: none;
   }
