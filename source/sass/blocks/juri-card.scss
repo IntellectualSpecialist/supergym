@@ -1,10 +1,13 @@
 .juri-card {
   position: relative;
+  background-color: $base-primary;
+  height: 100%;
 
   &:hover,
   &:focus {
     .juri-card__about {
       background-color: rgba(16, 38, 84, 0.89);
+      box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
     }
 
     .juri-card__info {
