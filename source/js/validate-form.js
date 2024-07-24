@@ -9,14 +9,12 @@ let nameInputElement;
 let phoneInputElement;
 let nameFieldElement;
 let phoneFieldElement;
-let inputsElements;
 
 if (formElement) {
   nameInputElement = formElement.querySelector('#name');
   phoneInputElement = formElement.querySelector('#tel');
   nameFieldElement = nameInputElement.closest('.field');
   phoneFieldElement = phoneInputElement.closest('.field');
-  inputsElements = formElement.querySelectorAll('input');
 }
 
 const createAlert = (message) => {
@@ -101,20 +99,20 @@ const onFormSubmit = (evt) => {
 };
 
 const onFieldInput = (evt) => {
-  const currentFieldElement = evt.target.closest('.field');
-  const currentErrorElement = currentFieldElement.querySelector('.field__error-message');
+  if (evt.target.matches('input')) {
 
-  currentFieldElement.classList.remove('field--invalid');
-  if (currentErrorElement) {
-    currentFieldElement.querySelector('.field__error-message').remove();
+    const currentFieldElement = evt.target.closest('.field');
+    const currentErrorElement = currentFieldElement.querySelector('.field__error-message');
+
+    currentFieldElement.classList.remove('field--invalid');
+    if (currentErrorElement) {
+      currentFieldElement.querySelector('.field__error-message').remove();
+    }
   }
 };
 
 const registerFormEvents = () => {
-  inputsElements.forEach((input) => {
-    input.addEventListener('input', onFieldInput);
-  });
-
+  formElement.addEventListener('input', onFieldInput);
   formElement.addEventListener('submit', onFormSubmit);
 };
 
