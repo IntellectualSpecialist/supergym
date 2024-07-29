@@ -1,6 +1,6 @@
-import { initActiveAccordionItemHeight } from './accordion';
+import { onTabChange } from './accordion';
 
-let currentTab = 1;
+let currentTab = 0;
 const faqTabsElement = document.querySelector('.faq-tabs');
 let tabButtonsListElement;
 let tabButtonsElements;
@@ -14,12 +14,9 @@ if (faqTabsElement) {
 
 const updateActiveButton = () => {
   tabButtonsElements.forEach((tab) => {
-    if (Number(tab.dataset.tabId) === currentTab) {
-      tab.classList.add('faq-tabs__button--active');
-    } else {
-      tab.classList.remove('faq-tabs__button--active');
-    }
+    tab.classList.remove('faq-tabs__button--active');
   });
+  tabButtonsElements[currentTab].classList.add('faq-tabs__button--active');
 };
 
 const updateTab = () => {
@@ -31,7 +28,7 @@ const updateTab = () => {
       tab.classList.remove('faq-tabs__tab--current');
     }
   });
-  initActiveAccordionItemHeight();
+  onTabChange();
 };
 
 const onTabButtonClick = (evt) => {

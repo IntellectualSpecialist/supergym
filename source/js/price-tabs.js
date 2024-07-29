@@ -4,6 +4,7 @@ const pricePerMonth = {
   'fullDay': 2700
 };
 let tabIndex = 0;
+let currentMonthCount = 1;
 const priceTabsElement = document.querySelector('.price-tabs');
 let tabButtonsListElement;
 let tabButtonsElements;
@@ -29,8 +30,6 @@ const updatePriceTabs = () => {
     const priceWrapper = card.querySelector('.price-card__price');
     const priceValue = priceWrapper.querySelector('.price-card__value');
 
-    const currentTab = tabButtonsElements[tabIndex];
-    const currentMonthCount = Number(currentTab.dataset.monthCount);
     const currentPrice = pricePerMonth[priceCardType] * currentMonthCount;
 
     priceWrapper.dataset.value = currentPrice;
@@ -41,6 +40,7 @@ const updatePriceTabs = () => {
 const onTabButtonClick = (evt) => {
   if (evt.target.matches('.price-tabs__button')) {
     tabIndex = Number(evt.target.dataset.id);
+    currentMonthCount = Number(evt.target.dataset.monthCount);
     updatePriceTabs();
   }
 };
