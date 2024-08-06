@@ -6,9 +6,9 @@ const removeNoJsClass = () => {
 };
 
 const onAccordionClick = (evt) => {
-  if (evt.target.matches('.accordion-item__button')) {
+  if (evt.target.closest('.accordion-item__button')) {
     const accordionItemElement = evt.target.closest('.accordion-item');
-    const accordionItemIndex = Array.prototype.indexOf.call(accordionItemElement.parentElement.children, accordionItemElement);
+    const accordionItemIndex = Array.from(evt.target.closest('.accordion').querySelectorAll('.accordion-item')).indexOf(accordionItemElement);
 
     accordionItemElement.querySelector('.accordion-item__content').classList.add('accordion-item__content--animation');
 

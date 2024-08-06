@@ -1,4 +1,5 @@
 .accordion-item {
+  position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -24,14 +25,84 @@
 }
 
 .accordion-item__button {
-  position: relative;
   flex-shrink: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &:hover {
+    .accordion-item__button-icon {
+      background-color: $bg-dark-blue;
+    }
+
+    .accordion-item__button-icon::before,
+    .accordion-item__button-icon::after {
+      background-color: $base-white;
+    }
+  }
+
+  &:focus-visible {
+    .accordion-item__button-icon {
+      background-color: $divider;
+    }
+
+    .accordion-item__button-icon::before,
+    .accordion-item__button-icon::after {
+      background-color: $base-white;
+    }
+  }
+
+  &:active {
+    .accordion-item__button-icon {
+      background-color: $bg-dark-blue;
+    }
+
+    .accordion-item__button-icon::before,
+    .accordion-item__button-icon::after {
+      background-color: $base-white;
+    }
+
+    .accordion-item__button-icon::before {
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    .accordion-item__button-icon::after {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+  }
+
+  &:disabled {
+    .accordion-item__button-icon {
+      opacity: 0.3;
+      pointer-events: none;
+      background-color: transparent;
+    }
+
+    .accordion-item__button-icon::before,
+    .accordion-item__button-icon::after {
+      background-color: $bg-dark-blue;
+    }
+  }
+}
+
+.accordion-item__button-icon {
+  position: relative;
+  display: block;
   width: 30px;
   height: 30px;
   background-color: transparent;
   border: 1px solid $bg-dark-blue;
   border-radius: 50%;
-  cursor: pointer;
   transition: 0.2s ease-in;
 
   &::before,
@@ -50,55 +121,9 @@
   &::after {
     transform: translate(-50%, -50%) rotate(-90deg);
   }
-
-  &:hover {
-    background-color: $bg-dark-blue;
-
-    &::before,
-    &::after {
-      background-color: $base-white;
-    }
-  }
-
-  &:focus {
-    background-color: $divider;
-
-    &::before,
-    &::after {
-      background-color: $base-white;
-    }
-  }
-
-  &:active {
-    background-color: $bg-dark-blue;
-
-    &::before,
-    &::after {
-      background-color: $base-white;
-    }
-
-    &::before {
-      transform: translate(-50%, -50%) rotate(180deg);
-    }
-
-    &::after {
-      transform: translate(-50%, -50%) rotate(0deg);
-    }
-  }
-
-  &:disabled {
-    opacity: 0.3;
-    pointer-events: none;
-    background-color: transparent;
-
-    &::before,
-    &::after {
-      background-color: $bg-dark-blue;
-    }
-  }
 }
 
-.accordion-item__button--disabled {
+.accordion-item__button--disabled .accordion-item__button-icon {
   opacity: 0.3;
   pointer-events: none;
   background-color: transparent;
@@ -107,18 +132,9 @@
   &::after {
     background-color: $bg-dark-blue;
   }
-
-  &:focus {
-    background-color: transparent;
-
-    &::before,
-    &::after {
-      background-color: $bg-dark-blue;
-    }
-  }
 }
 
-.accordion-item--active .accordion-item__button {
+.accordion-item--active .accordion-item__button-icon {
   background-color: $bg-dark-blue;
 
   &::before,
@@ -132,10 +148,6 @@
 
   &::after {
     transform: translate(-50%, -50%) rotate(0deg);
-  }
-
-  &:focus {
-    background-color: $divider;
   }
 }
 
@@ -173,7 +185,7 @@
     }
   }
 
-  .accordion-item__button {
+  .accordion-item__button-icon {
     margin-top: 0;
     width: 40px;
     height: 40px;

@@ -46,7 +46,7 @@
     border-color: $base-primary;
   }
 
-  &:focus {
+  &:focus-visible {
     border-color: $base-primary;
     background-color: $price-shadow;
   }
