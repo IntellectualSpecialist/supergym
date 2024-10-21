@@ -1,6 +1,6 @@
 .button {
   display: block;
-  height: 66px;
+  min-height: 66px;
   padding: 25px 27px;
   font-size: 12px;
   line-height: 12px;
@@ -47,7 +47,7 @@
 
   &--secondary {
     padding: 22px 25px;
-    height: auto;
+    min-height: auto;
     color: $base-white;
     border-color: $base-white;
 
